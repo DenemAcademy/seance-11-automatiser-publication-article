@@ -1,0 +1,164 @@
+Transcription brute - Séance 11 - Automatiser sa publication d'article
+Langue détectée : fr (1.00)
+Durée audio : 02:35:06
+
+[00:00:00 - 00:00:04] bonjour à tous et à toutes j'espère que vous allez bien on se retrouve aujourd'hui
+[00:00:04 - 00:00:13] pour la séance de création d'articles automatiques on va voir comment on met
+[00:00:13 - 00:00:19] ça en place va falloir bien suivre je vais faire ça étape par étape vous
+[00:00:19 - 00:00:23] allez voir c'est pas bien complexe je vais essayer de le faire de la manière
+[00:00:23 - 00:00:26] la plus simple possible pour que ce soit réalisable pour tout le monde
+[00:00:26 - 00:00:35] facilement donc on va partir d'un dossier notre dossier ça va être la partie blog
+[00:00:35 - 00:00:43] pour le moment nous on va travailler sur ce qui récupère les informations de
+[00:00:43 - 00:00:52] l'auditat CEO etc on va récupérer la structure de mon blog je vais la glisser
+[00:00:52 - 00:01:12] blog juste ici cliquez aussi l'auditat CEO je vais mettre dans blog maintenant je vais
+[00:01:12 - 00:01:20] pouvoir lancer ma session je fais une nouveau terminale au dossier je vais chercher la
+[00:01:20 - 00:01:31] commande oslibaripass pour yolo mode donc là je suis connecté en mode yolo
+[00:01:31 - 00:01:35] maintenant ce que je vais lui demander c'est de se connecter en mcpi à mon
+[00:01:35 - 00:02:09] site internet donc pour ça on fait une demande simple un navigateur sûr donc là c'est top
+[00:02:09 - 00:02:21] maintenant je vais me connecter à mon compte mon mot de passe je vais en essayer plusieurs
+[00:02:21 - 00:02:48] j'ai de la chance donc là il est connecté du coup en mcpi sur mon site internet je vais
+[00:02:48 - 00:03:14] lui demander l'analyse la structure de mon blog donc là il va comprendre la structure qu'on
+[00:03:14 - 00:03:20] a déjà fait ensemble par rapport au blog on l'avait déjà demandé d'ailleurs et en
+[00:03:20 - 00:03:27] plus de ça il a la structure juste ici avec toutes les informations donc ça je vais lui
+[00:03:27 - 00:03:44] donner j'aurais pu lui donner je vais lui donner tous ces documents là et après ce qu'on va
+[00:03:44 - 00:03:52] faire c'est qu'on va lui demander de créer un plan éditorial mode blog connecter la
+[00:03:52 - 00:04:27] pays donc benailles pour les images etc vous allez comprendre la stratégie plutôt sympa
+[00:04:27 - 00:04:33] franchement c'est propre et manager et nous on va essayer de pousser vraiment le process à fond
+[00:04:33 - 00:04:40] sur la partie blog automatique on veut pas que ce soit des articles ouais qu'ils sont pas pro
+[00:04:40 - 00:04:45] qu'ils vont pas nous positionner sur les moteurs de recherche ce qu'on cherche est vraiment
+[00:04:53 - 00:05:15] donc là il a bien terminé je vais leur donner l'information ensuite fois qu'il
+[00:05:15 - 00:05:23] aura fait donner l'audit sio un petit peu de contexte par rapport à ça on l'avait
+[00:05:23 - 00:06:09] fait ensemble html plusieurs allait faire ces mots clés là et ensuite créer plein d'articles
+[00:06:09 - 00:06:16] et faire des redirection interne à notre site web pas qu'ils soient vides par exemple si
+[00:06:16 - 00:06:23] je créé l'article 100 il faut qu'ils soient reliés à l'article 97 et l'article 98 et l'article
+[00:06:23 - 00:06:51] 97 et 98 doit être relié à l'article 100 c'est un peu ça le but de la stratégie si
+[00:06:51 - 00:07:26] pi on va attendre qu'ils finissent son analyse à prendre un petit peu de temps je pense que
+[00:07:26 - 00:08:22] ce que je vais faire maintenant c'est que je vais lui demander d'analyser sio là il va
+[00:08:22 - 00:08:31] aller récupérer un sujet va faire une analyse de mon dossier sio ensuite une fois que c'est fait
+[00:08:31 - 00:08:35] il va me créer un article en respectant ma structure et une fois qu'il aura cette
+[00:08:35 - 00:08:42] compréhension globale nous va passer à la partie automatique derrière je vais lui demander
+[00:08:42 - 00:08:49] de me publier préparer du coup un plan éditorial de 300 articles ou là on va le faire sur 10
+[00:08:49 - 00:08:55] ce sera toujours la même stratégie si vous demandez 10 100 200 300 400 500 et après je
+[00:08:55 - 00:09:00] vais lui demander de les planifier donc nos articles vont être planifiés directement sur
+[00:09:00 - 00:09:07] wordpress et par exemple si vous choisissez de les publier tous les jours ça va se publier
+[00:09:07 - 00:09:12] tous les jours à 9 heures c'est vous qui allez faire la demande à codex on va le voir par
+[00:09:12 - 00:10:30] la suite un petit peu c'est important là c'est qu'il est le contexte de la structure
+[00:10:30 - 00:10:37] pas qu'on lui demande de nous faire je sais pas 300 400 500 peu importe qu'en fait la structure
+[00:10:37 - 00:10:46] convient pas du tout à notre blog là on lui donne encore une fois le plus important des
+[00:10:46 - 00:10:52] informations on l'enrichit un maximum après enfin on passe à la phase automatisation du
+[00:10:52 - 00:11:12] voyage interne demandez aussi de nous faire des images donc avec gpt 2 images directement
+[00:11:12 - 00:11:21] par api donc je sais pas si c'est combien les couches on aura 3 4 images on aura l'image
+[00:11:21 - 00:13:14] principale alternatif là il est sur la partie visuelle on va attendre c'est bon il est en train
+[00:13:14 - 00:14:32] de générer l'image j'ai peu de temps il faut être patient parfois surtout c'est
+[00:14:32 - 00:14:35] pour ça que je vous dis que travailler sur plusieurs termines terminale en même temps
+[00:14:35 - 00:14:41] bah écoute ça va vous faire gagner beaucoup de temps parce que là attendre 10 minutes comme ça
+[00:14:41 - 00:14:48] c'est relou surtout que peut faire autre chose travailler sur 10 autres projets en même temps
+[00:14:48 - 00:15:06] peu importe 2 3 c'est bon il a fait les deux visuels clé à faire le html pour l'article
+[00:15:06 - 00:16:06] les images généré on va le laisser travailler à faire 1800 mots avec lien faq sur ces champs
+[00:16:06 - 00:16:22] on va lui faire comprendre comment programmer un article puisque le but c'est pas qu'on les
+[00:16:22 - 00:16:28] mette tout son brouillon et qu'après nous revenir sur wordpress cliquer sur valider
+[00:16:28 - 00:16:36] publier nous on veut que ce soit simple compréhensible et surtout full automatique en tout cas moi
+[00:16:36 - 00:16:42] personnellement vous pouvez choisir le mettre en brouillon si vous souhaitez donc publier
+[00:16:42 - 00:16:46] directement c'est à son article mais je sais pas si c'est bien pour le laisser ou pas
+[00:16:46 - 00:16:51] pas fait énormément de recherche dessus de manière honnête à voir ça peut être une
+[00:16:51 - 00:16:58] stratégie je sais qu'avant je tenais un site je publier 10 articles par jour c'était
+[00:16:58 - 00:17:09] comme ils s'appellent c'était une analyse de rêve et en termes d'essieu je crois j'étais
+[00:17:09 - 00:17:18] à 30 mille à peu près 35 par mois 35 mille visites du fouli 1 marcher bien après ça
+[00:17:18 - 00:17:24] dépend peut-être aussi de la mission quoi vous positionner avoir à tester en tout cas
+[00:17:24 - 00:18:41] à rédiger l'article une voie l'objectif d'avoir un blog automatique donc avec des
+[00:18:41 - 00:18:48] articles qui sont publiés automatiquement positionné sur chat gpt et sur google surtout
+[00:18:48 - 00:18:53] que la google soit en train de revoir leur stratégie sio dans le sens où il veut
+[00:18:53 - 00:19:41] l'intégrer fouli a énormément changé je pense que c'est bien de ce qu'est ce que
+[00:19:41 - 00:20:29] je lui ai demandé d'autres donc là je vais demander qui programme en mcp mais qu'il est
+[00:20:29 - 00:20:39] connecté à chrome directement partie là peut-être que ça va buguer parce que je travaillais
+[00:20:39 - 00:22:51] sur une autre session à confondre alors juste me limite à faire le décalage horaire entre
+[00:22:51 - 00:23:04] les deux c'est top attend juste qu'ils finissent ça encore une fois après on va lui donner
+[00:23:04 - 00:23:09] un petit peu plus d'indications pour que nos articles soient bien optimisés pour
+[00:23:09 - 00:24:02] l'usio et pour le géo et voir ça n'est pas complexe on va voir ça ensemble ok
+[00:24:02 - 00:25:10] c'est un train de chargé au corps il va s'autocorriger là remarquer une erreur
+[00:25:10 - 00:25:39] on va attendre notre demande d'image directement mais nous c'est pas ce qu'on veut quand
+[00:25:39 - 00:25:44] une fois pour l'usio c'est pas bon ni pour le géo le but c'est d'avoir vraiment des images
+[00:25:44 - 00:25:48] différentes à chaque article donc ça on lui dira après on le laisse travailler on
+[00:25:48 - 00:25:58] va pas le couper maintenant l'obligé à upload des images directement avec cette
+[00:25:58 - 00:26:06] partie là texte alternatif tites légende on lui vient de faire la description aussi
+[00:26:06 - 00:26:39] ce qui m'intéresse la partie planification voir s'il arrive à la gérer directement
+[00:26:39 - 00:27:11] il est temps vous savez ce qu'on peut faire pour éviter de perdre trop de temps c'est qu'on
+[00:27:11 - 00:27:28] va ouvrir l'audit sio on va copier la commande konex dont je reçois demandé
+[00:27:28 - 00:27:52] d'analyser notre audit sio il a un peu galère konex c'est très bien qu'on a
+[00:27:52 - 00:28:45] fait les tests avant superbe il a remarqué une erreur donc on va pouvoir la corriger
+[00:28:45 - 00:30:43] en même temps notre audit on a déjà analysé c'est pour ça qu'il sait pas qu'on a
+[00:30:43 - 00:33:42] dit ça sur 20 articles et ensuite on utilisera du coup le plan éditorial qui
+[00:33:42 - 00:34:38] nous a généré sur cette session là a bien réussi à planifier à 8h45 je vais lui dire
+[00:34:38 - 00:35:52] tout simplement top ce qu'on va faire c'est qu'on va lui donner notre clé API en dur pourquoi
+[00:35:52 - 00:35:56] parce que nous on va faire du one shot encore une fois on va supprimer ensuite la clé API
+[00:35:56 - 00:36:02] qu'on n'a pas besoin de la stocker en UNV là ce que je vais faire c'est je vais faire
+[00:36:02 - 00:36:07] l'article une fois que j'ai généré mais 100 200 300 articles et bien j'irai la supprimer
+[00:36:07 - 00:39:03] directement et bien voilà je lui redonné partie là qui doit faire ça si il y a celui là superbe
+[00:39:03 - 00:39:07] maintenant ce qu'on va lui dire c'est d'enrichir ce plan éditorial pour le
+[00:39:07 - 00:44:23] VCO qui est la stratégie on va le faire sortir pour upload là on a bien le maillage
+[00:44:23 - 00:48:14] la phase on a bien fait le maillage de l'image mais il donne une fourchette large pour pas
+[00:48:14 - 00:48:20] qu'il est à chaque fois à régénérer s'il fait 1600 1600 mots quoi je vais dire 1000
+[00:48:20 - 00:49:33] là je lui ai envoyé le prompt qui est donc c'est top à faire du jason ensuite il va faire
+[00:49:33 - 00:50:35] du mapping sur ce jason là pour édiger l'article donc là ça va prendre sûrement une bonne vingtaine
+[00:50:35 - 00:50:43] ou trentaine de minutes je vais accélérer cette partie là comme ça derrière bah n'ayez pas
+[00:50:43 - 00:50:51] de temps ça ne va pas vous servir à grand chose de regarder comme ça donc voilà je
+[00:50:51 - 01:04:46] vais accélérer un petit peu ok top du coup maintenant il nous a rédigé les articles avec
+[01:04:46 - 01:04:52] 400 mots la structure le maillage interne les liens externes les quatre blocs images par
+[01:04:52 - 01:04:58] article donc je vais lui demander du coup maintenant de les publier sur wordpress et
+[01:04:58 - 01:05:08] comme on a pu le voir il n'a pas encore fait les 80 images simplement indication de
+[01:05:08 - 01:05:55] programmer les articles je lui ai donné l'information maintenant il va la réaliser
+[01:05:55 - 01:06:03] et ensuite on aura nos articles du coup qui sont programmés là je les fais sur 20 mais vous
+[01:06:03 - 01:06:08] allez très bien pouvoir demander 200 300 400 encore une fois c'est juste ça prendra un peu
+[01:06:08 - 02:04:12] plus de temps pendant trois ans vous aurez du compte ok bon top maintenant on va voir un
+[02:04:12 - 02:04:29] petit peu du coup les informations qui nous a déjà qu'il ya bien toutes les images on a
+[02:04:29 - 02:05:22] l'url la description plutôt top fonctionnel on va quand même regarder un autre article
+[02:05:22 - 02:05:56] franchement c'est propre c'est parfait c'est exactement ce que je voulais rien à dire parfait
+[02:05:56 - 02:07:27] après là j'en ai fait que 20 qui ont été bien planifiés du coup juste ici ce genre de
+[02:07:27 - 02:07:49] phrase que j'aime pas trop je pourrais lui demander d'améliorer mais qu'elle ne plaise pas mais
+[02:07:49 - 02:10:29] en général franchement c'est bien on a regardé un petit peu ça je vais dire ce qui est bien
+[02:10:29 - 02:10:33] avec un système de blogging comme ça c'est que là derrière s'il m'aurait généré les
+[02:10:33 - 02:10:43] 100 articles directement sur le bps j'aurais pas pu voir le résultat en fait et du coup j'aurais
+[02:10:43 - 02:10:47] dû rebuller l'automatisation même si j'aurais fait un workflow une huitaine ça aurait été
+[02:10:47 - 02:10:53] relou et galère donc là ce qui est bien c'est qu'il va reprendre tous les articles planifiés il
+[02:10:53 - 02:11:11] va modifier directement selon ma demande me faire une version plus clinique tu vas aller
+[02:11:11 - 02:11:15] bien il ya bien toutes les informations en sommaire donc c'est top c'est juste du
+[02:11:15 - 02:11:23] contenu à changer on va le laisser travailler on va voir un petit peu ce qui va faire mais
+[02:11:23 - 02:11:27] je pense que j'aurais dû être un petit peu plus explicatif au niveau de mon système de
+[02:11:27 - 02:11:40] comptings qui est quelle sorte d'article je voulais c'est dommage qu'il ait pas compris mais plus
+[02:11:40 - 02:11:46] en détail on aurait pu faire ça en one shot on va faire une phase d'amélioration peu de temps
+[02:11:46 - 02:11:53] mais c'est pas grave détecter où ça n'allait pas ce qui va nous permettre aussi par la
+[02:11:53 - 02:12:01] suite du coup d'avoir la perfection une fois qu'on va lui demander une génération de 200
+[02:12:01 - 02:12:09] ou 300 articles on a quand même eu un bon retour qui nous permet de constater que le
+[02:12:09 - 02:12:48] résultat de notre demande en termes textuels en termes de structure c'est parfait on va
+[02:12:48 - 02:15:10] attendre un petit peu qui regénère les modifications donc là il a fait les modifications
+[02:15:10 - 02:15:56] c'est le cas tout compris par rapport à la demande ce qu'on va faire ça va pas être
+[02:15:56 - 02:18:01] compliqué je vais copier un article donc là il ya une assez grosse problématique je
+[02:18:01 - 02:18:06] pense qu'on s'est pas capté c'est moi aussi qui a mal géré le système de prompting sûrement
+[02:18:06 - 02:18:11] donc c'est important aussi de montrer la réalité c'est pour ça que moi je
+[02:18:11 - 02:18:16] parte sur une stratégie à niveau de cette formation de faire du live parce que ça
+[02:18:16 - 02:18:24] ça aurait très bien pu vous arriver du coup là moi l'objectif c'est de retravailler du
+[02:18:24 - 02:18:32] coup sur la problématique que je viens d'avoir lui demander qu'est-ce qu'il remarque
+[02:18:32 - 02:18:38] qui ne va pas ensuite il détecte les mêmes points que moi et là on passe sur la phase
+[02:18:38 - 02:28:36] d'amélioration donc là ce que je suis en train de te dire il va les améliorer donc là on a
+[02:28:36 - 02:29:27] notre nouvelle version qui a été généré ok donc là déjà l'article correspond un peu plus à
+[02:29:27 - 02:29:37] ce que je souhaite automatiser google ouais on va essayer de voir un autre prendre au pif celui
+[02:29:37 - 02:29:49] là par exemple un agent si j'avais à comment choisir ok donc là c'est pas très français mais
+[02:29:49 - 02:30:18] c'est normal c'est pour taper sur le bon mot-clé on a un problème au niveau du lien là on va lui
+[02:30:18 - 02:30:27] expliquer que les liens de redirection ne fonctionnent pas dire carrément d'enlever
+[02:30:27 - 02:31:03] tout et ensuite qui n'intéresse pas du tout en fait structure elle est bonne exactement le
+[02:31:03 - 02:31:10] style d'article qui me plaît bien sûr les bons mots-clés qu'il a bien su corriger c'est
+[02:31:10 - 02:32:25] top la conversation et je lui dire de m'enlever tous ces liens aller en site allure ensuite tout
+[02:32:25 - 02:33:34] ce bloc là pardon et même si derrière vous avez généré je sais pas par exemple 300 400
+[02:33:34 - 02:33:39] articles vous pouvez récupérer ces 300 400 articles et modifier directement dans codec
+[02:33:39 - 02:33:48] vu qu'il les a déjà généré sur wordpress il les a planifiés etc vous pouvez après
+[02:33:48 - 02:33:53] chercher les modifications c'est ça qui va être bien avec ce système de blog automatique à
+[02:33:53 - 02:34:00] différence de créer un système sur un 8n là on peut vraiment tout modifier d'un coup si
+[02:34:00 - 02:34:06] derrière vous rencontrez une problématique similaire juste avec un prompt et bien
+[02:34:06 - 02:34:15] arriver à quelque chose qui correspond à la demande du client quelque chose qui est
+[02:34:15 - 02:34:25] satisfaisant et d'ailleurs pour préciser ça c'est une stratégie que j'ai mis en place un
+[02:34:25 - 02:34:30] client qui n'était pas sur wordpress mais prestashop c'était un blog automatique full
+[02:34:30 - 02:34:43] seo geo et je l'avais facturé je crois 4005 entre 4005 et 4008 et j'avais mis 100 euros de
+[02:34:43 - 02:34:49] maintenance donc 99 par mois voilà c'est quelque chose qui est assez rapide à faire
+[02:34:49 - 02:34:55] et qui est assez rentable donc voilà j'espère qu'en tout cas la science vous a plu si vous
+[02:34:55 - 02:34:59] avez des questions dessus n'hésitez pas à m'envoyer un petit message sur slack en tout
+[02:34:59 - 02:35:02] cas merci et on passe à la suite

@@ -1,0 +1,1287 @@
+{
+  "language": "fr",
+  "language_probability": 1,
+  "duration": 9306.452,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0.37,
+      "end": 3.81,
+      "start_hms": "00:00:00",
+      "end_hms": "00:00:04",
+      "text": "bonjour à tous et à toutes j'espère que vous allez bien on se retrouve aujourd'hui"
+    },
+    {
+      "id": 2,
+      "start": 3.81,
+      "end": 13.3,
+      "start_hms": "00:00:04",
+      "end_hms": "00:00:13",
+      "text": "pour la séance de création d'articles automatiques on va voir comment on met"
+    },
+    {
+      "id": 3,
+      "start": 13.3,
+      "end": 18.92,
+      "start_hms": "00:00:13",
+      "end_hms": "00:00:19",
+      "text": "ça en place va falloir bien suivre je vais faire ça étape par étape vous"
+    },
+    {
+      "id": 4,
+      "start": 18.92,
+      "end": 22.52,
+      "start_hms": "00:00:19",
+      "end_hms": "00:00:23",
+      "text": "allez voir c'est pas bien complexe je vais essayer de le faire de la manière"
+    },
+    {
+      "id": 5,
+      "start": 22.52,
+      "end": 26.17,
+      "start_hms": "00:00:23",
+      "end_hms": "00:00:26",
+      "text": "la plus simple possible pour que ce soit réalisable pour tout le monde"
+    },
+    {
+      "id": 6,
+      "start": 26.17,
+      "end": 34.93,
+      "start_hms": "00:00:26",
+      "end_hms": "00:00:35",
+      "text": "facilement donc on va partir d'un dossier notre dossier ça va être la partie blog"
+    },
+    {
+      "id": 7,
+      "start": 34.93,
+      "end": 43.26,
+      "start_hms": "00:00:35",
+      "end_hms": "00:00:43",
+      "text": "pour le moment nous on va travailler sur ce qui récupère les informations de"
+    },
+    {
+      "id": 8,
+      "start": 43.26,
+      "end": 52.23,
+      "start_hms": "00:00:43",
+      "end_hms": "00:00:52",
+      "text": "l'auditat CEO etc on va récupérer la structure de mon blog je vais la glisser"
+    },
+    {
+      "id": 9,
+      "start": 52.23,
+      "end": 72.13,
+      "start_hms": "00:00:52",
+      "end_hms": "00:01:12",
+      "text": "blog juste ici cliquez aussi l'auditat CEO je vais mettre dans blog maintenant je vais"
+    },
+    {
+      "id": 10,
+      "start": 72.13,
+      "end": 80.1,
+      "start_hms": "00:01:12",
+      "end_hms": "00:01:20",
+      "text": "pouvoir lancer ma session je fais une nouveau terminale au dossier je vais chercher la"
+    },
+    {
+      "id": 11,
+      "start": 80.1,
+      "end": 91.06,
+      "start_hms": "00:01:20",
+      "end_hms": "00:01:31",
+      "text": "commande oslibaripass pour yolo mode donc là je suis connecté en mode yolo"
+    },
+    {
+      "id": 12,
+      "start": 91.06,
+      "end": 95.34,
+      "start_hms": "00:01:31",
+      "end_hms": "00:01:35",
+      "text": "maintenant ce que je vais lui demander c'est de se connecter en mcpi à mon"
+    },
+    {
+      "id": 13,
+      "start": 95.34,
+      "end": 128.58,
+      "start_hms": "00:01:35",
+      "end_hms": "00:02:09",
+      "text": "site internet donc pour ça on fait une demande simple un navigateur sûr donc là c'est top"
+    },
+    {
+      "id": 14,
+      "start": 128.58,
+      "end": 141.13,
+      "start_hms": "00:02:09",
+      "end_hms": "00:02:21",
+      "text": "maintenant je vais me connecter à mon compte mon mot de passe je vais en essayer plusieurs"
+    },
+    {
+      "id": 15,
+      "start": 141.13,
+      "end": 168.18,
+      "start_hms": "00:02:21",
+      "end_hms": "00:02:48",
+      "text": "j'ai de la chance donc là il est connecté du coup en mcpi sur mon site internet je vais"
+    },
+    {
+      "id": 16,
+      "start": 168.18,
+      "end": 193.69,
+      "start_hms": "00:02:48",
+      "end_hms": "00:03:14",
+      "text": "lui demander l'analyse la structure de mon blog donc là il va comprendre la structure qu'on"
+    },
+    {
+      "id": 17,
+      "start": 193.69,
+      "end": 199.9,
+      "start_hms": "00:03:14",
+      "end_hms": "00:03:20",
+      "text": "a déjà fait ensemble par rapport au blog on l'avait déjà demandé d'ailleurs et en"
+    },
+    {
+      "id": 18,
+      "start": 199.9,
+      "end": 207.4,
+      "start_hms": "00:03:20",
+      "end_hms": "00:03:27",
+      "text": "plus de ça il a la structure juste ici avec toutes les informations donc ça je vais lui"
+    },
+    {
+      "id": 19,
+      "start": 207.4,
+      "end": 223.56,
+      "start_hms": "00:03:27",
+      "end_hms": "00:03:44",
+      "text": "donner j'aurais pu lui donner je vais lui donner tous ces documents là et après ce qu'on va"
+    },
+    {
+      "id": 20,
+      "start": 223.56,
+      "end": 231.88,
+      "start_hms": "00:03:44",
+      "end_hms": "00:03:52",
+      "text": "faire c'est qu'on va lui demander de créer un plan éditorial mode blog connecter la"
+    },
+    {
+      "id": 21,
+      "start": 231.88,
+      "end": 267.27,
+      "start_hms": "00:03:52",
+      "end_hms": "00:04:27",
+      "text": "pays donc benailles pour les images etc vous allez comprendre la stratégie plutôt sympa"
+    },
+    {
+      "id": 22,
+      "start": 267.27,
+      "end": 273.17,
+      "start_hms": "00:04:27",
+      "end_hms": "00:04:33",
+      "text": "franchement c'est propre et manager et nous on va essayer de pousser vraiment le process à fond"
+    },
+    {
+      "id": 23,
+      "start": 273.17,
+      "end": 280.39,
+      "start_hms": "00:04:33",
+      "end_hms": "00:04:40",
+      "text": "sur la partie blog automatique on veut pas que ce soit des articles ouais qu'ils sont pas pro"
+    },
+    {
+      "id": 24,
+      "start": 280.39,
+      "end": 285.16,
+      "start_hms": "00:04:40",
+      "end_hms": "00:04:45",
+      "text": "qu'ils vont pas nous positionner sur les moteurs de recherche ce qu'on cherche est vraiment"
+    },
+    {
+      "id": 25,
+      "start": 292.85,
+      "end": 315.02,
+      "start_hms": "00:04:53",
+      "end_hms": "00:05:15",
+      "text": "donc là il a bien terminé je vais leur donner l'information ensuite fois qu'il"
+    },
+    {
+      "id": 26,
+      "start": 315.02,
+      "end": 323.32,
+      "start_hms": "00:05:15",
+      "end_hms": "00:05:23",
+      "text": "aura fait donner l'audit sio un petit peu de contexte par rapport à ça on l'avait"
+    },
+    {
+      "id": 27,
+      "start": 323.32,
+      "end": 369.27,
+      "start_hms": "00:05:23",
+      "end_hms": "00:06:09",
+      "text": "fait ensemble html plusieurs allait faire ces mots clés là et ensuite créer plein d'articles"
+    },
+    {
+      "id": 28,
+      "start": 369.27,
+      "end": 375.67,
+      "start_hms": "00:06:09",
+      "end_hms": "00:06:16",
+      "text": "et faire des redirection interne à notre site web pas qu'ils soient vides par exemple si"
+    },
+    {
+      "id": 29,
+      "start": 375.67,
+      "end": 382.7,
+      "start_hms": "00:06:16",
+      "end_hms": "00:06:23",
+      "text": "je créé l'article 100 il faut qu'ils soient reliés à l'article 97 et l'article 98 et l'article"
+    },
+    {
+      "id": 30,
+      "start": 382.7,
+      "end": 410.74,
+      "start_hms": "00:06:23",
+      "end_hms": "00:06:51",
+      "text": "97 et 98 doit être relié à l'article 100 c'est un peu ça le but de la stratégie si"
+    },
+    {
+      "id": 31,
+      "start": 410.74,
+      "end": 445.57,
+      "start_hms": "00:06:51",
+      "end_hms": "00:07:26",
+      "text": "pi on va attendre qu'ils finissent son analyse à prendre un petit peu de temps je pense que"
+    },
+    {
+      "id": 32,
+      "start": 445.57,
+      "end": 502.34,
+      "start_hms": "00:07:26",
+      "end_hms": "00:08:22",
+      "text": "ce que je vais faire maintenant c'est que je vais lui demander d'analyser sio là il va"
+    },
+    {
+      "id": 33,
+      "start": 502.34,
+      "end": 511.2,
+      "start_hms": "00:08:22",
+      "end_hms": "00:08:31",
+      "text": "aller récupérer un sujet va faire une analyse de mon dossier sio ensuite une fois que c'est fait"
+    },
+    {
+      "id": 34,
+      "start": 511.2,
+      "end": 515.4,
+      "start_hms": "00:08:31",
+      "end_hms": "00:08:35",
+      "text": "il va me créer un article en respectant ma structure et une fois qu'il aura cette"
+    },
+    {
+      "id": 35,
+      "start": 515.4,
+      "end": 521.8,
+      "start_hms": "00:08:35",
+      "end_hms": "00:08:42",
+      "text": "compréhension globale nous va passer à la partie automatique derrière je vais lui demander"
+    },
+    {
+      "id": 36,
+      "start": 521.8,
+      "end": 529.12,
+      "start_hms": "00:08:42",
+      "end_hms": "00:08:49",
+      "text": "de me publier préparer du coup un plan éditorial de 300 articles ou là on va le faire sur 10"
+    },
+    {
+      "id": 37,
+      "start": 529.12,
+      "end": 535.44,
+      "start_hms": "00:08:49",
+      "end_hms": "00:08:55",
+      "text": "ce sera toujours la même stratégie si vous demandez 10 100 200 300 400 500 et après je"
+    },
+    {
+      "id": 38,
+      "start": 535.44,
+      "end": 540.32,
+      "start_hms": "00:08:55",
+      "end_hms": "00:09:00",
+      "text": "vais lui demander de les planifier donc nos articles vont être planifiés directement sur"
+    },
+    {
+      "id": 39,
+      "start": 540.32,
+      "end": 546.68,
+      "start_hms": "00:09:00",
+      "end_hms": "00:09:07",
+      "text": "wordpress et par exemple si vous choisissez de les publier tous les jours ça va se publier"
+    },
+    {
+      "id": 40,
+      "start": 546.68,
+      "end": 551.74,
+      "start_hms": "00:09:07",
+      "end_hms": "00:09:12",
+      "text": "tous les jours à 9 heures c'est vous qui allez faire la demande à codex on va le voir par"
+    },
+    {
+      "id": 41,
+      "start": 551.74,
+      "end": 630.08,
+      "start_hms": "00:09:12",
+      "end_hms": "00:10:30",
+      "text": "la suite un petit peu c'est important là c'est qu'il est le contexte de la structure"
+    },
+    {
+      "id": 42,
+      "start": 630.08,
+      "end": 636.91,
+      "start_hms": "00:10:30",
+      "end_hms": "00:10:37",
+      "text": "pas qu'on lui demande de nous faire je sais pas 300 400 500 peu importe qu'en fait la structure"
+    },
+    {
+      "id": 43,
+      "start": 636.91,
+      "end": 645.74,
+      "start_hms": "00:10:37",
+      "end_hms": "00:10:46",
+      "text": "convient pas du tout à notre blog là on lui donne encore une fois le plus important des"
+    },
+    {
+      "id": 44,
+      "start": 645.74,
+      "end": 652.1,
+      "start_hms": "00:10:46",
+      "end_hms": "00:10:52",
+      "text": "informations on l'enrichit un maximum après enfin on passe à la phase automatisation du"
+    },
+    {
+      "id": 45,
+      "start": 652.1,
+      "end": 671.89,
+      "start_hms": "00:10:52",
+      "end_hms": "00:11:12",
+      "text": "voyage interne demandez aussi de nous faire des images donc avec gpt 2 images directement"
+    },
+    {
+      "id": 46,
+      "start": 671.89,
+      "end": 681.28,
+      "start_hms": "00:11:12",
+      "end_hms": "00:11:21",
+      "text": "par api donc je sais pas si c'est combien les couches on aura 3 4 images on aura l'image"
+    },
+    {
+      "id": 47,
+      "start": 681.28,
+      "end": 793.63,
+      "start_hms": "00:11:21",
+      "end_hms": "00:13:14",
+      "text": "principale alternatif là il est sur la partie visuelle on va attendre c'est bon il est en train"
+    },
+    {
+      "id": 48,
+      "start": 793.63,
+      "end": 871.62,
+      "start_hms": "00:13:14",
+      "end_hms": "00:14:32",
+      "text": "de générer l'image j'ai peu de temps il faut être patient parfois surtout c'est"
+    },
+    {
+      "id": 49,
+      "start": 871.62,
+      "end": 875.14,
+      "start_hms": "00:14:32",
+      "end_hms": "00:14:35",
+      "text": "pour ça que je vous dis que travailler sur plusieurs termines terminale en même temps"
+    },
+    {
+      "id": 50,
+      "start": 875.14,
+      "end": 881.34,
+      "start_hms": "00:14:35",
+      "end_hms": "00:14:41",
+      "text": "bah écoute ça va vous faire gagner beaucoup de temps parce que là attendre 10 minutes comme ça"
+    },
+    {
+      "id": 51,
+      "start": 881.34,
+      "end": 887.65,
+      "start_hms": "00:14:41",
+      "end_hms": "00:14:48",
+      "text": "c'est relou surtout que peut faire autre chose travailler sur 10 autres projets en même temps"
+    },
+    {
+      "id": 52,
+      "start": 887.65,
+      "end": 905.81,
+      "start_hms": "00:14:48",
+      "end_hms": "00:15:06",
+      "text": "peu importe 2 3 c'est bon il a fait les deux visuels clé à faire le html pour l'article"
+    },
+    {
+      "id": 53,
+      "start": 905.81,
+      "end": 965.72,
+      "start_hms": "00:15:06",
+      "end_hms": "00:16:06",
+      "text": "les images généré on va le laisser travailler à faire 1800 mots avec lien faq sur ces champs"
+    },
+    {
+      "id": 54,
+      "start": 965.72,
+      "end": 982.06,
+      "start_hms": "00:16:06",
+      "end_hms": "00:16:22",
+      "text": "on va lui faire comprendre comment programmer un article puisque le but c'est pas qu'on les"
+    },
+    {
+      "id": 55,
+      "start": 982.06,
+      "end": 988.02,
+      "start_hms": "00:16:22",
+      "end_hms": "00:16:28",
+      "text": "mette tout son brouillon et qu'après nous revenir sur wordpress cliquer sur valider"
+    },
+    {
+      "id": 56,
+      "start": 988.02,
+      "end": 996.43,
+      "start_hms": "00:16:28",
+      "end_hms": "00:16:36",
+      "text": "publier nous on veut que ce soit simple compréhensible et surtout full automatique en tout cas moi"
+    },
+    {
+      "id": 57,
+      "start": 996.43,
+      "end": 1002.37,
+      "start_hms": "00:16:36",
+      "end_hms": "00:16:42",
+      "text": "personnellement vous pouvez choisir le mettre en brouillon si vous souhaitez donc publier"
+    },
+    {
+      "id": 58,
+      "start": 1002.37,
+      "end": 1006.45,
+      "start_hms": "00:16:42",
+      "end_hms": "00:16:46",
+      "text": "directement c'est à son article mais je sais pas si c'est bien pour le laisser ou pas"
+    },
+    {
+      "id": 59,
+      "start": 1006.45,
+      "end": 1011.28,
+      "start_hms": "00:16:46",
+      "end_hms": "00:16:51",
+      "text": "pas fait énormément de recherche dessus de manière honnête à voir ça peut être une"
+    },
+    {
+      "id": 60,
+      "start": 1011.32,
+      "end": 1017.7,
+      "start_hms": "00:16:51",
+      "end_hms": "00:16:58",
+      "text": "stratégie je sais qu'avant je tenais un site je publier 10 articles par jour c'était"
+    },
+    {
+      "id": 61,
+      "start": 1017.7,
+      "end": 1029.16,
+      "start_hms": "00:16:58",
+      "end_hms": "00:17:09",
+      "text": "comme ils s'appellent c'était une analyse de rêve et en termes d'essieu je crois j'étais"
+    },
+    {
+      "id": 62,
+      "start": 1029.16,
+      "end": 1038.22,
+      "start_hms": "00:17:09",
+      "end_hms": "00:17:18",
+      "text": "à 30 mille à peu près 35 par mois 35 mille visites du fouli 1 marcher bien après ça"
+    },
+    {
+      "id": 63,
+      "start": 1038.22,
+      "end": 1043.62,
+      "start_hms": "00:17:18",
+      "end_hms": "00:17:24",
+      "text": "dépend peut-être aussi de la mission quoi vous positionner avoir à tester en tout cas"
+    },
+    {
+      "id": 64,
+      "start": 1043.62,
+      "end": 1121.18,
+      "start_hms": "00:17:24",
+      "end_hms": "00:18:41",
+      "text": "à rédiger l'article une voie l'objectif d'avoir un blog automatique donc avec des"
+    },
+    {
+      "id": 65,
+      "start": 1121.18,
+      "end": 1128.09,
+      "start_hms": "00:18:41",
+      "end_hms": "00:18:48",
+      "text": "articles qui sont publiés automatiquement positionné sur chat gpt et sur google surtout"
+    },
+    {
+      "id": 66,
+      "start": 1128.09,
+      "end": 1133.08,
+      "start_hms": "00:18:48",
+      "end_hms": "00:18:53",
+      "text": "que la google soit en train de revoir leur stratégie sio dans le sens où il veut"
+    },
+    {
+      "id": 67,
+      "start": 1133.08,
+      "end": 1180.78,
+      "start_hms": "00:18:53",
+      "end_hms": "00:19:41",
+      "text": "l'intégrer fouli a énormément changé je pense que c'est bien de ce qu'est ce que"
+    },
+    {
+      "id": 68,
+      "start": 1180.78,
+      "end": 1229.03,
+      "start_hms": "00:19:41",
+      "end_hms": "00:20:29",
+      "text": "je lui ai demandé d'autres donc là je vais demander qui programme en mcp mais qu'il est"
+    },
+    {
+      "id": 69,
+      "start": 1229.03,
+      "end": 1238.9,
+      "start_hms": "00:20:29",
+      "end_hms": "00:20:39",
+      "text": "connecté à chrome directement partie là peut-être que ça va buguer parce que je travaillais"
+    },
+    {
+      "id": 70,
+      "start": 1238.9,
+      "end": 1371.46,
+      "start_hms": "00:20:39",
+      "end_hms": "00:22:51",
+      "text": "sur une autre session à confondre alors juste me limite à faire le décalage horaire entre"
+    },
+    {
+      "id": 71,
+      "start": 1371.46,
+      "end": 1384.17,
+      "start_hms": "00:22:51",
+      "end_hms": "00:23:04",
+      "text": "les deux c'est top attend juste qu'ils finissent ça encore une fois après on va lui donner"
+    },
+    {
+      "id": 72,
+      "start": 1384.17,
+      "end": 1388.65,
+      "start_hms": "00:23:04",
+      "end_hms": "00:23:09",
+      "text": "un petit peu plus d'indications pour que nos articles soient bien optimisés pour"
+    },
+    {
+      "id": 73,
+      "start": 1388.65,
+      "end": 1442.41,
+      "start_hms": "00:23:09",
+      "end_hms": "00:24:02",
+      "text": "l'usio et pour le géo et voir ça n'est pas complexe on va voir ça ensemble ok"
+    },
+    {
+      "id": 74,
+      "start": 1442.41,
+      "end": 1510.27,
+      "start_hms": "00:24:02",
+      "end_hms": "00:25:10",
+      "text": "c'est un train de chargé au corps il va s'autocorriger là remarquer une erreur"
+    },
+    {
+      "id": 75,
+      "start": 1510.27,
+      "end": 1538.67,
+      "start_hms": "00:25:10",
+      "end_hms": "00:25:39",
+      "text": "on va attendre notre demande d'image directement mais nous c'est pas ce qu'on veut quand"
+    },
+    {
+      "id": 76,
+      "start": 1538.71,
+      "end": 1544.45,
+      "start_hms": "00:25:39",
+      "end_hms": "00:25:44",
+      "text": "une fois pour l'usio c'est pas bon ni pour le géo le but c'est d'avoir vraiment des images"
+    },
+    {
+      "id": 77,
+      "start": 1544.45,
+      "end": 1548.49,
+      "start_hms": "00:25:44",
+      "end_hms": "00:25:48",
+      "text": "différentes à chaque article donc ça on lui dira après on le laisse travailler on"
+    },
+    {
+      "id": 78,
+      "start": 1548.49,
+      "end": 1558.22,
+      "start_hms": "00:25:48",
+      "end_hms": "00:25:58",
+      "text": "va pas le couper maintenant l'obligé à upload des images directement avec cette"
+    },
+    {
+      "id": 79,
+      "start": 1558.22,
+      "end": 1565.69,
+      "start_hms": "00:25:58",
+      "end_hms": "00:26:06",
+      "text": "partie là texte alternatif tites légende on lui vient de faire la description aussi"
+    },
+    {
+      "id": 80,
+      "start": 1565.69,
+      "end": 1599.19,
+      "start_hms": "00:26:06",
+      "end_hms": "00:26:39",
+      "text": "ce qui m'intéresse la partie planification voir s'il arrive à la gérer directement"
+    },
+    {
+      "id": 81,
+      "start": 1599.19,
+      "end": 1631.24,
+      "start_hms": "00:26:39",
+      "end_hms": "00:27:11",
+      "text": "il est temps vous savez ce qu'on peut faire pour éviter de perdre trop de temps c'est qu'on"
+    },
+    {
+      "id": 82,
+      "start": 1631.24,
+      "end": 1647.65,
+      "start_hms": "00:27:11",
+      "end_hms": "00:27:28",
+      "text": "va ouvrir l'audit sio on va copier la commande konex dont je reçois demandé"
+    },
+    {
+      "id": 83,
+      "start": 1647.65,
+      "end": 1671.51,
+      "start_hms": "00:27:28",
+      "end_hms": "00:27:52",
+      "text": "d'analyser notre audit sio il a un peu galère konex c'est très bien qu'on a"
+    },
+    {
+      "id": 84,
+      "start": 1671.51,
+      "end": 1725.29,
+      "start_hms": "00:27:52",
+      "end_hms": "00:28:45",
+      "text": "fait les tests avant superbe il a remarqué une erreur donc on va pouvoir la corriger"
+    },
+    {
+      "id": 85,
+      "start": 1725.29,
+      "end": 1843.45,
+      "start_hms": "00:28:45",
+      "end_hms": "00:30:43",
+      "text": "en même temps notre audit on a déjà analysé c'est pour ça qu'il sait pas qu'on a"
+    },
+    {
+      "id": 86,
+      "start": 1843.45,
+      "end": 2021.54,
+      "start_hms": "00:30:43",
+      "end_hms": "00:33:42",
+      "text": "dit ça sur 20 articles et ensuite on utilisera du coup le plan éditorial qui"
+    },
+    {
+      "id": 87,
+      "start": 2021.54,
+      "end": 2078.46,
+      "start_hms": "00:33:42",
+      "end_hms": "00:34:38",
+      "text": "nous a généré sur cette session là a bien réussi à planifier à 8h45 je vais lui dire"
+    },
+    {
+      "id": 88,
+      "start": 2078.46,
+      "end": 2151.59,
+      "start_hms": "00:34:38",
+      "end_hms": "00:35:52",
+      "text": "tout simplement top ce qu'on va faire c'est qu'on va lui donner notre clé API en dur pourquoi"
+    },
+    {
+      "id": 89,
+      "start": 2151.59,
+      "end": 2156.19,
+      "start_hms": "00:35:52",
+      "end_hms": "00:35:56",
+      "text": "parce que nous on va faire du one shot encore une fois on va supprimer ensuite la clé API"
+    },
+    {
+      "id": 90,
+      "start": 2156.19,
+      "end": 2161.5,
+      "start_hms": "00:35:56",
+      "end_hms": "00:36:02",
+      "text": "qu'on n'a pas besoin de la stocker en UNV là ce que je vais faire c'est je vais faire"
+    },
+    {
+      "id": 91,
+      "start": 2161.5,
+      "end": 2166.86,
+      "start_hms": "00:36:02",
+      "end_hms": "00:36:07",
+      "text": "l'article une fois que j'ai généré mais 100 200 300 articles et bien j'irai la supprimer"
+    },
+    {
+      "id": 92,
+      "start": 2166.86,
+      "end": 2343.21,
+      "start_hms": "00:36:07",
+      "end_hms": "00:39:03",
+      "text": "directement et bien voilà je lui redonné partie là qui doit faire ça si il y a celui là superbe"
+    },
+    {
+      "id": 93,
+      "start": 2343.21,
+      "end": 2347.38,
+      "start_hms": "00:39:03",
+      "end_hms": "00:39:07",
+      "text": "maintenant ce qu'on va lui dire c'est d'enrichir ce plan éditorial pour le"
+    },
+    {
+      "id": 94,
+      "start": 2347.38,
+      "end": 2662.69,
+      "start_hms": "00:39:07",
+      "end_hms": "00:44:23",
+      "text": "VCO qui est la stratégie on va le faire sortir pour upload là on a bien le maillage"
+    },
+    {
+      "id": 95,
+      "start": 2662.69,
+      "end": 2894.3,
+      "start_hms": "00:44:23",
+      "end_hms": "00:48:14",
+      "text": "la phase on a bien fait le maillage de l'image mais il donne une fourchette large pour pas"
+    },
+    {
+      "id": 96,
+      "start": 2894.3,
+      "end": 2900.36,
+      "start_hms": "00:48:14",
+      "end_hms": "00:48:20",
+      "text": "qu'il est à chaque fois à régénérer s'il fait 1600 1600 mots quoi je vais dire 1000"
+    },
+    {
+      "id": 97,
+      "start": 2900.36,
+      "end": 2973.34,
+      "start_hms": "00:48:20",
+      "end_hms": "00:49:33",
+      "text": "là je lui ai envoyé le prompt qui est donc c'est top à faire du jason ensuite il va faire"
+    },
+    {
+      "id": 98,
+      "start": 2973.34,
+      "end": 3034.58,
+      "start_hms": "00:49:33",
+      "end_hms": "00:50:35",
+      "text": "du mapping sur ce jason là pour édiger l'article donc là ça va prendre sûrement une bonne vingtaine"
+    },
+    {
+      "id": 99,
+      "start": 3034.58,
+      "end": 3043.48,
+      "start_hms": "00:50:35",
+      "end_hms": "00:50:43",
+      "text": "ou trentaine de minutes je vais accélérer cette partie là comme ça derrière bah n'ayez pas"
+    },
+    {
+      "id": 100,
+      "start": 3043.48,
+      "end": 3051.4,
+      "start_hms": "00:50:43",
+      "end_hms": "00:50:51",
+      "text": "de temps ça ne va pas vous servir à grand chose de regarder comme ça donc voilà je"
+    },
+    {
+      "id": 101,
+      "start": 3051.4,
+      "end": 3885.77,
+      "start_hms": "00:50:51",
+      "end_hms": "01:04:46",
+      "text": "vais accélérer un petit peu ok top du coup maintenant il nous a rédigé les articles avec"
+    },
+    {
+      "id": 102,
+      "start": 3885.97,
+      "end": 3891.89,
+      "start_hms": "01:04:46",
+      "end_hms": "01:04:52",
+      "text": "400 mots la structure le maillage interne les liens externes les quatre blocs images par"
+    },
+    {
+      "id": 103,
+      "start": 3891.89,
+      "end": 3897.6,
+      "start_hms": "01:04:52",
+      "end_hms": "01:04:58",
+      "text": "article donc je vais lui demander du coup maintenant de les publier sur wordpress et"
+    },
+    {
+      "id": 104,
+      "start": 3897.6,
+      "end": 3908.16,
+      "start_hms": "01:04:58",
+      "end_hms": "01:05:08",
+      "text": "comme on a pu le voir il n'a pas encore fait les 80 images simplement indication de"
+    },
+    {
+      "id": 105,
+      "start": 3908.16,
+      "end": 3954.7,
+      "start_hms": "01:05:08",
+      "end_hms": "01:05:55",
+      "text": "programmer les articles je lui ai donné l'information maintenant il va la réaliser"
+    },
+    {
+      "id": 106,
+      "start": 3954.7,
+      "end": 3963.14,
+      "start_hms": "01:05:55",
+      "end_hms": "01:06:03",
+      "text": "et ensuite on aura nos articles du coup qui sont programmés là je les fais sur 20 mais vous"
+    },
+    {
+      "id": 107,
+      "start": 3963.14,
+      "end": 3967.94,
+      "start_hms": "01:06:03",
+      "end_hms": "01:06:08",
+      "text": "allez très bien pouvoir demander 200 300 400 encore une fois c'est juste ça prendra un peu"
+    },
+    {
+      "id": 108,
+      "start": 3967.94,
+      "end": 7451.75,
+      "start_hms": "01:06:08",
+      "end_hms": "02:04:12",
+      "text": "plus de temps pendant trois ans vous aurez du compte ok bon top maintenant on va voir un"
+    },
+    {
+      "id": 109,
+      "start": 7451.75,
+      "end": 7468.86,
+      "start_hms": "02:04:12",
+      "end_hms": "02:04:29",
+      "text": "petit peu du coup les informations qui nous a déjà qu'il ya bien toutes les images on a"
+    },
+    {
+      "id": 110,
+      "start": 7468.86,
+      "end": 7522.29,
+      "start_hms": "02:04:29",
+      "end_hms": "02:05:22",
+      "text": "l'url la description plutôt top fonctionnel on va quand même regarder un autre article"
+    },
+    {
+      "id": 111,
+      "start": 7522.29,
+      "end": 7555.73,
+      "start_hms": "02:05:22",
+      "end_hms": "02:05:56",
+      "text": "franchement c'est propre c'est parfait c'est exactement ce que je voulais rien à dire parfait"
+    },
+    {
+      "id": 112,
+      "start": 7555.73,
+      "end": 7647.23,
+      "start_hms": "02:05:56",
+      "end_hms": "02:07:27",
+      "text": "après là j'en ai fait que 20 qui ont été bien planifiés du coup juste ici ce genre de"
+    },
+    {
+      "id": 113,
+      "start": 7647.23,
+      "end": 7668.69,
+      "start_hms": "02:07:27",
+      "end_hms": "02:07:49",
+      "text": "phrase que j'aime pas trop je pourrais lui demander d'améliorer mais qu'elle ne plaise pas mais"
+    },
+    {
+      "id": 114,
+      "start": 7668.69,
+      "end": 7828.56,
+      "start_hms": "02:07:49",
+      "end_hms": "02:10:29",
+      "text": "en général franchement c'est bien on a regardé un petit peu ça je vais dire ce qui est bien"
+    },
+    {
+      "id": 115,
+      "start": 7828.56,
+      "end": 7833.46,
+      "start_hms": "02:10:29",
+      "end_hms": "02:10:33",
+      "text": "avec un système de blogging comme ça c'est que là derrière s'il m'aurait généré les"
+    },
+    {
+      "id": 116,
+      "start": 7833.46,
+      "end": 7842.52,
+      "start_hms": "02:10:33",
+      "end_hms": "02:10:43",
+      "text": "100 articles directement sur le bps j'aurais pas pu voir le résultat en fait et du coup j'aurais"
+    },
+    {
+      "id": 117,
+      "start": 7842.52,
+      "end": 7846.88,
+      "start_hms": "02:10:43",
+      "end_hms": "02:10:47",
+      "text": "dû rebuller l'automatisation même si j'aurais fait un workflow une huitaine ça aurait été"
+    },
+    {
+      "id": 118,
+      "start": 7846.88,
+      "end": 7852.53,
+      "start_hms": "02:10:47",
+      "end_hms": "02:10:53",
+      "text": "relou et galère donc là ce qui est bien c'est qu'il va reprendre tous les articles planifiés il"
+    },
+    {
+      "id": 119,
+      "start": 7852.53,
+      "end": 7871.03,
+      "start_hms": "02:10:53",
+      "end_hms": "02:11:11",
+      "text": "va modifier directement selon ma demande me faire une version plus clinique tu vas aller"
+    },
+    {
+      "id": 120,
+      "start": 7871.03,
+      "end": 7874.91,
+      "start_hms": "02:11:11",
+      "end_hms": "02:11:15",
+      "text": "bien il ya bien toutes les informations en sommaire donc c'est top c'est juste du"
+    },
+    {
+      "id": 121,
+      "start": 7874.91,
+      "end": 7882.93,
+      "start_hms": "02:11:15",
+      "end_hms": "02:11:23",
+      "text": "contenu à changer on va le laisser travailler on va voir un petit peu ce qui va faire mais"
+    },
+    {
+      "id": 122,
+      "start": 7882.93,
+      "end": 7886.65,
+      "start_hms": "02:11:23",
+      "end_hms": "02:11:27",
+      "text": "je pense que j'aurais dû être un petit peu plus explicatif au niveau de mon système de"
+    },
+    {
+      "id": 123,
+      "start": 7886.65,
+      "end": 7900.37,
+      "start_hms": "02:11:27",
+      "end_hms": "02:11:40",
+      "text": "comptings qui est quelle sorte d'article je voulais c'est dommage qu'il ait pas compris mais plus"
+    },
+    {
+      "id": 124,
+      "start": 7900.37,
+      "end": 7906.31,
+      "start_hms": "02:11:40",
+      "end_hms": "02:11:46",
+      "text": "en détail on aurait pu faire ça en one shot on va faire une phase d'amélioration peu de temps"
+    },
+    {
+      "id": 125,
+      "start": 7906.31,
+      "end": 7913.3,
+      "start_hms": "02:11:46",
+      "end_hms": "02:11:53",
+      "text": "mais c'est pas grave détecter où ça n'allait pas ce qui va nous permettre aussi par la"
+    },
+    {
+      "id": 126,
+      "start": 7913.3,
+      "end": 7920.98,
+      "start_hms": "02:11:53",
+      "end_hms": "02:12:01",
+      "text": "suite du coup d'avoir la perfection une fois qu'on va lui demander une génération de 200"
+    },
+    {
+      "id": 127,
+      "start": 7920.98,
+      "end": 7929.47,
+      "start_hms": "02:12:01",
+      "end_hms": "02:12:09",
+      "text": "ou 300 articles on a quand même eu un bon retour qui nous permet de constater que le"
+    },
+    {
+      "id": 128,
+      "start": 7929.47,
+      "end": 7967.56,
+      "start_hms": "02:12:09",
+      "end_hms": "02:12:48",
+      "text": "résultat de notre demande en termes textuels en termes de structure c'est parfait on va"
+    },
+    {
+      "id": 129,
+      "start": 7967.56,
+      "end": 8109.51,
+      "start_hms": "02:12:48",
+      "end_hms": "02:15:10",
+      "text": "attendre un petit peu qui regénère les modifications donc là il a fait les modifications"
+    },
+    {
+      "id": 130,
+      "start": 8109.51,
+      "end": 8155.68,
+      "start_hms": "02:15:10",
+      "end_hms": "02:15:56",
+      "text": "c'est le cas tout compris par rapport à la demande ce qu'on va faire ça va pas être"
+    },
+    {
+      "id": 131,
+      "start": 8155.68,
+      "end": 8280.83,
+      "start_hms": "02:15:56",
+      "end_hms": "02:18:01",
+      "text": "compliqué je vais copier un article donc là il ya une assez grosse problématique je"
+    },
+    {
+      "id": 132,
+      "start": 8280.83,
+      "end": 8286.3,
+      "start_hms": "02:18:01",
+      "end_hms": "02:18:06",
+      "text": "pense qu'on s'est pas capté c'est moi aussi qui a mal géré le système de prompting sûrement"
+    },
+    {
+      "id": 133,
+      "start": 8286.3,
+      "end": 8291.04,
+      "start_hms": "02:18:06",
+      "end_hms": "02:18:11",
+      "text": "donc c'est important aussi de montrer la réalité c'est pour ça que moi je"
+    },
+    {
+      "id": 134,
+      "start": 8291.04,
+      "end": 8295.95,
+      "start_hms": "02:18:11",
+      "end_hms": "02:18:16",
+      "text": "parte sur une stratégie à niveau de cette formation de faire du live parce que ça"
+    },
+    {
+      "id": 135,
+      "start": 8295.95,
+      "end": 8303.59,
+      "start_hms": "02:18:16",
+      "end_hms": "02:18:24",
+      "text": "ça aurait très bien pu vous arriver du coup là moi l'objectif c'est de retravailler du"
+    },
+    {
+      "id": 136,
+      "start": 8303.59,
+      "end": 8311.86,
+      "start_hms": "02:18:24",
+      "end_hms": "02:18:32",
+      "text": "coup sur la problématique que je viens d'avoir lui demander qu'est-ce qu'il remarque"
+    },
+    {
+      "id": 137,
+      "start": 8311.86,
+      "end": 8317.9,
+      "start_hms": "02:18:32",
+      "end_hms": "02:18:38",
+      "text": "qui ne va pas ensuite il détecte les mêmes points que moi et là on passe sur la phase"
+    },
+    {
+      "id": 138,
+      "start": 8317.9,
+      "end": 8915.58,
+      "start_hms": "02:18:38",
+      "end_hms": "02:28:36",
+      "text": "d'amélioration donc là ce que je suis en train de te dire il va les améliorer donc là on a"
+    },
+    {
+      "id": 139,
+      "start": 8915.58,
+      "end": 8967.22,
+      "start_hms": "02:28:36",
+      "end_hms": "02:29:27",
+      "text": "notre nouvelle version qui a été généré ok donc là déjà l'article correspond un peu plus à"
+    },
+    {
+      "id": 140,
+      "start": 8967.22,
+      "end": 8977.14,
+      "start_hms": "02:29:27",
+      "end_hms": "02:29:37",
+      "text": "ce que je souhaite automatiser google ouais on va essayer de voir un autre prendre au pif celui"
+    },
+    {
+      "id": 141,
+      "start": 8977.14,
+      "end": 8989.11,
+      "start_hms": "02:29:37",
+      "end_hms": "02:29:49",
+      "text": "là par exemple un agent si j'avais à comment choisir ok donc là c'est pas très français mais"
+    },
+    {
+      "id": 142,
+      "start": 8989.11,
+      "end": 9018.29,
+      "start_hms": "02:29:49",
+      "end_hms": "02:30:18",
+      "text": "c'est normal c'est pour taper sur le bon mot-clé on a un problème au niveau du lien là on va lui"
+    },
+    {
+      "id": 143,
+      "start": 9018.29,
+      "end": 9027.41,
+      "start_hms": "02:30:18",
+      "end_hms": "02:30:27",
+      "text": "expliquer que les liens de redirection ne fonctionnent pas dire carrément d'enlever"
+    },
+    {
+      "id": 144,
+      "start": 9027.41,
+      "end": 9062.88,
+      "start_hms": "02:30:27",
+      "end_hms": "02:31:03",
+      "text": "tout et ensuite qui n'intéresse pas du tout en fait structure elle est bonne exactement le"
+    },
+    {
+      "id": 145,
+      "start": 9062.88,
+      "end": 9070.13,
+      "start_hms": "02:31:03",
+      "end_hms": "02:31:10",
+      "text": "style d'article qui me plaît bien sûr les bons mots-clés qu'il a bien su corriger c'est"
+    },
+    {
+      "id": 146,
+      "start": 9070.13,
+      "end": 9145.06,
+      "start_hms": "02:31:10",
+      "end_hms": "02:32:25",
+      "text": "top la conversation et je lui dire de m'enlever tous ces liens aller en site allure ensuite tout"
+    },
+    {
+      "id": 147,
+      "start": 9145.06,
+      "end": 9214.11,
+      "start_hms": "02:32:25",
+      "end_hms": "02:33:34",
+      "text": "ce bloc là pardon et même si derrière vous avez généré je sais pas par exemple 300 400"
+    },
+    {
+      "id": 148,
+      "start": 9214.11,
+      "end": 9219.07,
+      "start_hms": "02:33:34",
+      "end_hms": "02:33:39",
+      "text": "articles vous pouvez récupérer ces 300 400 articles et modifier directement dans codec"
+    },
+    {
+      "id": 149,
+      "start": 9219.07,
+      "end": 9227.67,
+      "start_hms": "02:33:39",
+      "end_hms": "02:33:48",
+      "text": "vu qu'il les a déjà généré sur wordpress il les a planifiés etc vous pouvez après"
+    },
+    {
+      "id": 150,
+      "start": 9227.71,
+      "end": 9233.27,
+      "start_hms": "02:33:48",
+      "end_hms": "02:33:53",
+      "text": "chercher les modifications c'est ça qui va être bien avec ce système de blog automatique à"
+    },
+    {
+      "id": 151,
+      "start": 9233.27,
+      "end": 9239.51,
+      "start_hms": "02:33:53",
+      "end_hms": "02:34:00",
+      "text": "différence de créer un système sur un 8n là on peut vraiment tout modifier d'un coup si"
+    },
+    {
+      "id": 152,
+      "start": 9239.51,
+      "end": 9245.84,
+      "start_hms": "02:34:00",
+      "end_hms": "02:34:06",
+      "text": "derrière vous rencontrez une problématique similaire juste avec un prompt et bien"
+    },
+    {
+      "id": 153,
+      "start": 9245.84,
+      "end": 9255.02,
+      "start_hms": "02:34:06",
+      "end_hms": "02:34:15",
+      "text": "arriver à quelque chose qui correspond à la demande du client quelque chose qui est"
+    },
+    {
+      "id": 154,
+      "start": 9255.02,
+      "end": 9264.58,
+      "start_hms": "02:34:15",
+      "end_hms": "02:34:25",
+      "text": "satisfaisant et d'ailleurs pour préciser ça c'est une stratégie que j'ai mis en place un"
+    },
+    {
+      "id": 155,
+      "start": 9264.58,
+      "end": 9269.77,
+      "start_hms": "02:34:25",
+      "end_hms": "02:34:30",
+      "text": "client qui n'était pas sur wordpress mais prestashop c'était un blog automatique full"
+    },
+    {
+      "id": 156,
+      "start": 9269.77,
+      "end": 9282.56,
+      "start_hms": "02:34:30",
+      "end_hms": "02:34:43",
+      "text": "seo geo et je l'avais facturé je crois 4005 entre 4005 et 4008 et j'avais mis 100 euros de"
+    },
+    {
+      "id": 157,
+      "start": 9282.56,
+      "end": 9288.79,
+      "start_hms": "02:34:43",
+      "end_hms": "02:34:49",
+      "text": "maintenance donc 99 par mois voilà c'est quelque chose qui est assez rapide à faire"
+    },
+    {
+      "id": 158,
+      "start": 9288.79,
+      "end": 9295.22,
+      "start_hms": "02:34:49",
+      "end_hms": "02:34:55",
+      "text": "et qui est assez rentable donc voilà j'espère qu'en tout cas la science vous a plu si vous"
+    },
+    {
+      "id": 159,
+      "start": 9295.22,
+      "end": 9299.14,
+      "start_hms": "02:34:55",
+      "end_hms": "02:34:59",
+      "text": "avez des questions dessus n'hésitez pas à m'envoyer un petit message sur slack en tout"
+    },
+    {
+      "id": 160,
+      "start": 9299.14,
+      "end": 9302.07,
+      "start_hms": "02:34:59",
+      "end_hms": "02:35:02",
+      "text": "cas merci et on passe à la suite"
+    }
+  ]
+}

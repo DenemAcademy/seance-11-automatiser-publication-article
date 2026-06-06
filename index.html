@@ -1,0 +1,2081 @@
+<!doctype html>
+<html lang="fr" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Séance 11 - Automatiser sa publication d’article | DENEM Academy</title>
+  <meta name="description" content="Support complet de formation : automatiser la publication d'articles WordPress avec Codex, SEO/GEO, images, planning, maillage interne et correction en lot.">
+  <link rel="icon" href="logo-denem.jpeg">
+  <style>
+:root {
+  --ink: #0f172a;
+  --muted: #475569;
+  --paper: #fffdf8;
+  --line: #0f172a;
+  --blue: #2563eb;
+  --green: #22c55e;
+  --violet: #7c3aed;
+  --orange: #f97316;
+  --cyan: #06b6d4;
+  --soft: #f8fafc;
+  --shadow: 8px 8px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+img { max-width: 100%; }
+::selection { background: #dbeafe; color: var(--ink); }
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, var(--blue), var(--green), var(--orange), var(--violet));
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  border-bottom: 2px solid var(--ink);
+  background: rgba(255, 253, 248, .94);
+  backdrop-filter: blur(12px);
+}
+.topbar-inner {
+  max-width: 1320px;
+  margin: auto;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 900;
+}
+.brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+.brand span {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.nav {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  max-width: 760px;
+  padding: 4px 0 8px;
+}
+.nav a {
+  flex: 0 0 auto;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  padding: 6px 9px;
+  text-decoration: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 900;
+}
+.nav a.active { background: var(--ink); color: #fff; }
+.hero {
+  position: relative;
+  border-bottom: 2px solid var(--ink);
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(15,23,42,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,.07) 1px, transparent 1px),
+    #fffaf0;
+  background-size: 34px 34px;
+}
+.hero-inner {
+  max-width: 1320px;
+  margin: auto;
+  padding: 66px 18px 54px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 36px;
+  align-items: center;
+}
+.eyebrow {
+  display: inline-flex;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: var(--green);
+  padding: 8px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 24px 0 18px;
+  font-size: 72px;
+  line-height: .95;
+  font-weight: 950;
+}
+.hero p {
+  margin: 0;
+  max-width: 860px;
+  color: #334155;
+  font-size: 20px;
+  line-height: 1.75;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 26px;
+}
+.hero-stats div {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  padding: 14px;
+  font-weight: 900;
+}
+.hero-stats b {
+  display: block;
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 18px;
+}
+.hero-visual {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  background: #fff;
+  overflow: hidden;
+}
+.hero-visual img { display: block; width: 100%; }
+.summary {
+  max-width: 1320px;
+  margin: auto;
+  padding: 34px 18px;
+  border-bottom: 2px solid var(--ink);
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.summary-card {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  padding: 18px;
+  text-decoration: none;
+  transition: transform .18s ease;
+}
+.summary-card:hover { transform: translate(-2px, -2px); }
+.summary-card b {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--violet);
+}
+.summary-card h3 { margin: 10px 0 8px; font-size: 20px; }
+.summary-card p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
+.section {
+  scroll-margin-top: 86px;
+  max-width: 1320px;
+  margin: auto;
+  padding: 72px 18px;
+  border-bottom: 2px solid var(--ink);
+}
+.section:nth-of-type(odd) {
+  background-image:
+    linear-gradient(rgba(37,99,235,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249,115,22,.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  align-items: start;
+}
+.image-first { grid-template-columns: .95fr 1.05fr; }
+.section-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.section-meta span,
+.section-meta em {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  padding: 6px 10px;
+  background: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.section-meta span { background: var(--blue); color: #fff; }
+.section h2 {
+  margin: 0 0 18px;
+  max-width: 980px;
+  font-size: 46px;
+  line-height: 1.05;
+  font-weight: 950;
+}
+.lead {
+  max-width: 920px;
+  margin: 0 0 18px;
+  color: #334155;
+  font-size: 18px;
+  line-height: 1.85;
+}
+.dark-section {
+  max-width: none;
+  background: #0b1020 !important;
+  color: #fff;
+}
+.dark-section > * {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dark-section .lead { color: #dbeafe; }
+.dark-section .section-meta em { color: var(--ink); }
+.shot {
+  margin: 0;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  background: #fff;
+  overflow: hidden;
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.shot figcaption {
+  display: flex;
+  gap: 10px;
+  border-top: 2px solid var(--ink);
+  padding: 12px 14px;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 800;
+}
+.shot figcaption span {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+.card-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.card-grid article,
+.callout,
+.before-after article {
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  padding: 18px;
+}
+.dark-section .card-grid article { color: var(--ink); }
+.card-grid b,
+.callout b,
+.before-after span {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--violet);
+}
+.card-grid p,
+.callout p,
+.before-after p {
+  margin: 8px 0 0;
+  color: #334155;
+  line-height: 1.7;
+}
+.callout { margin-top: 20px; }
+.callout.tip { background: #ecfeff; }
+.callout.warning { background: #fff7ed; }
+.before-after {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+.checklist label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  padding: 15px;
+  font-weight: 850;
+  line-height: 1.4;
+}
+.checklist input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--green);
+}
+.table-wrap {
+  overflow: auto;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  margin-top: 20px;
+  background: #fff;
+}
+table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 2px solid var(--ink);
+  padding: 13px 14px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+}
+th { background: var(--ink); color: #fff; }
+.prompt-card {
+  margin: 20px 0;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  background: #0b1020;
+  color: #fff;
+  overflow: hidden;
+}
+.prompt-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 2px solid rgba(255,255,255,.28);
+  padding: 10px 12px;
+  background: #111827;
+}
+.prompt-head span {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #bbf7d0;
+}
+.copy-btn {
+  border: 2px solid #fff;
+  background: #fff;
+  color: var(--ink);
+  padding: 7px 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.copy-btn.copied { background: #bbf7d0; }
+.prompt-note {
+  margin: 0;
+  padding: 12px 16px 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+.prompt-card pre {
+  margin: 0;
+  padding: 18px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.75;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+.gallery figure {
+  margin: 0;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  overflow: hidden;
+}
+.gallery img {
+  display: block;
+  width: 100%;
+}
+.gallery figcaption {
+  border-top: 2px solid var(--ink);
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #334155;
+  font-weight: 800;
+}
+.footer {
+  border-top: 2px solid var(--ink);
+  padding: 28px 18px;
+  background: #fff;
+}
+.footer-inner {
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+@media (max-width: 1050px) {
+  .hero-inner,
+  .split,
+  .image-first {
+    grid-template-columns: 1fr;
+  }
+  .summary-grid,
+  .card-grid,
+  .card-grid.cols-4,
+  .checklist,
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .topbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav { max-width: 100%; }
+}
+@media (max-width: 700px) {
+  h1 { font-size: 42px; }
+  .section h2 { font-size: 32px; }
+  .hero-inner { padding: 42px 16px; }
+  .hero p,
+  .lead { font-size: 16px; line-height: 1.75; }
+  .hero-stats,
+  .summary-grid,
+  .card-grid,
+  .card-grid.cols-4,
+  .before-after,
+  .checklist,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .section { padding: 52px 16px; }
+  .shot { box-shadow: var(--shadow-sm); }
+  .prompt-card pre { font-size: 12px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top"><img src="logo-denem.jpeg" alt="Logo DENEM Academy"><span>DENEM Academy · Séance 11</span></a>
+      <nav class="nav" aria-label="Navigation sections"><a href="#section-01">01</a><a href="#section-02">02</a><a href="#section-03">03</a><a href="#section-04">04</a><a href="#section-05">05</a><a href="#section-06">06</a><a href="#section-07">07</a><a href="#section-08">08</a><a href="#section-09">09</a><a href="#section-10">10</a><a href="#section-11">11</a><a href="#section-12">12</a><a href="#section-13">13</a><a href="#section-14">14</a><a href="#section-15">15</a><a href="#section-16">16</a><a href="#section-17">17</a><a href="#section-18">18</a><a href="#section-19">19</a><a href="#section-20">20</a><a href="#section-21">21</a><a href="#section-22">22</a><a href="#section-23">23</a><a href="#section-24">24</a><a href="#section-25">25</a><a href="#section-26">26</a><a href="#section-27">27</a><a href="#section-28">28</a><a href="#section-29">29</a><a href="#section-30">30</a><a href="#section-31">31</a><a href="#section-32">32</a><a href="#section-33">33</a><a href="#section-34">34</a><a href="#section-35">35</a><a href="#section-36">36</a><a href="#section-37">37</a><a href="#section-38">38</a><a href="#section-39">39</a><a href="#section-40">40</a><a href="#section-41">41</a><a href="#section-42">42</a><a href="#section-43">43</a><a href="#section-44">44</a><a href="#section-45">45</a><a href="#section-46">46</a><a href="#section-47">47</a><a href="#section-48">48</a><a href="#section-49">49</a><a href="#section-50">50</a><a href="#section-51">51</a><a href="#section-52">52</a><a href="#section-53">53</a><a href="#section-54">54</a><a href="#section-55">55</a><a href="#section-56">56</a><a href="#section-57">57</a><a href="#section-58">58</a><a href="#section-59">59</a><a href="#section-60">60</a><a href="#section-61">61</a><a href="#section-62">62</a><a href="#section-63">63</a><a href="#section-64">64</a><a href="#section-65">65</a><a href="#section-66">66</a><a href="#section-67">67</a><a href="#section-68">68</a><a href="#section-69">69</a><a href="#section-70">70</a><a href="#section-71">71</a><a href="#section-72">72</a><a href="#section-73">73</a><a href="#section-74">74</a><a href="#section-75">75</a><a href="#section-76">76</a><a href="#section-77">77</a><a href="#section-78">78</a><a href="#section-79">79</a><a href="#section-80">80</a></nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Automatiser sa publication d’article</span>
+        <h1>Je crée un système de blog automatique, vérifiable et corrigeable.</h1>
+        <p>Je pars d'un audit SEO et d'une structure WordPress existante. Je donne le contexte à Codex, je crée un premier article, je prépare le plan éditorial, je génère les articles, je les programme, puis je corrige le lot quand le ton ne me convient pas.</p>
+        <div class="hero-stats">
+          <div><b>80</b>sections</div>
+          <div><b>23</b>captures</div>
+          <div><b>10</b>prompts</div>
+          <div><b>3</b>transcriptions</div>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/images/18-18-articles-planifies.jpg" alt="Article WordPress planifie et verifie dans RestIA">
+      </figure>
+    </div>
+  </section>
+  <aside class="summary">
+    <div class="summary-grid"><a class="summary-card" href="#section-01"><b>01-10</b><h3>Préparer</h3><p>Dossier, contexte, preuves et logique de contrôle.</p></a>
+<a class="summary-card" href="#section-11"><b>11-20</b><h3>Connecter</h3><p>Codex, WordPress, Chrome et analyse de structure.</p></a>
+<a class="summary-card" href="#section-21"><b>21-30</b><h3>Tester</h3><p>Premier article, SEO/GEO, images et programmation.</p></a>
+<a class="summary-card" href="#section-31"><b>31-40</b><h3>Planifier</h3><p>Audit, clé API, maillage et cadence tous les 3 jours.</p></a>
+<a class="summary-card" href="#section-41"><b>41-50</b><h3>Structurer</h3><p>JSON, mapping, génération et contrôles avant upload.</p></a>
+<a class="summary-card" href="#section-51"><b>51-60</b><h3>Publier</h3><p>Intégration WordPress, statuts, champs et rendu lecteur.</p></a>
+<a class="summary-card" href="#section-61"><b>61-70</b><h3>Corriger</h3><p>Ton template, diagnostic, correction et liens.</p></a>
+<a class="summary-card" href="#section-71"><b>71-80</b><h3>Vendre</h3><p>Prestation, maintenance, prompts, transcription et récap.</p></a></div>
+  </aside>
+  <main>
+    
+    <section id="section-01" class="section dark-section reveal" data-section="01">
+      
+      <div class="section-meta">
+        <span>01</span>
+        <em>objectif</em>
+      </div>
+      <h2>Automatiser les articles sans perdre le contrôle</h2>
+      <p class="lead">Je construis un système qui part d&#x27;un audit SEO, génère un plan éditorial, crée des articles, ajoute les images, programme WordPress et me laisse corriger tout le lot si le ton n&#x27;est pas bon. Le but n&#x27;est pas de produire beaucoup pour produire beaucoup. Le but est d&#x27;obtenir un processus réutilisable, vérifiable et vendable.</p><div class="card-grid cols-3"><article><b>Sortie attendue</b><p>20 articles programmés, avec maillage, images et dates.</p></article>
+<article><b>Compétence IA</b><p>Savoir cadrer un agent, pas juste lui demander un texte.</p></article>
+<article><b>Preuve finale</b><p>WordPress contient les articles et je peux les modifier en lot.</p></article></div>
+    
+    </section>
+        
+    <section id="section-02" class="section reveal" data-section="02">
+      
+      <div class="section-meta">
+        <span>02</span>
+        <em>fil rouge</em>
+      </div>
+      <h2>Je pars du blog RestIA déjà structuré</h2>
+      <p class="lead">Je ne repars pas d&#x27;une page blanche. Le site RestIA a déjà une structure, un design, des pages business et une logique SEO. L&#x27;automatisation doit respecter ce contexte. Si je crée un blog automatique qui ne colle pas au site, je gagne du temps au mauvais endroit.</p>
+      <div class="before-after">
+        <article><span>Avant</span><p>Je demande à Codex de générer des articles sans contexte.</p></article>
+        <article><span>Après</span><p>Je lui donne les dossiers, l&#x27;audit SEO, la structure du blog et les contraintes WordPress.</p></article>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-03" class="section reveal" data-section="03">
+      
+      <div class="section-meta">
+        <span>03</span>
+        <em>carte</em>
+      </div>
+      <h2>La séance avance en huit actes</h2>
+      <div class="card-grid cols-4"><article><b>1. Préparer</b><p>Mettre les bons dossiers et les bons fichiers au même endroit.</p></article>
+<article><b>2. Connecter</b><p>Ouvrir WordPress dans Chrome et connecter Codex.</p></article>
+<article><b>3. Tester</b><p>Creer un premier article pour valider la structure.</p></article>
+<article><b>4. Planifier</b><p>Construire le maillage et les dates de publication.</p></article>
+<article><b>5. Generer</b><p>Produire les articles et les prompts image.</p></article>
+<article><b>6. Publier</b><p>Envoyer les articles dans WordPress.</p></article>
+<article><b>7. Corriger</b><p>Diagnostiquer le ton et les liens problematiques.</p></article>
+<article><b>8. Industrialiser</b><p>Transformer la méthode en prestation réutilisable.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-04" class="section reveal" data-section="04">
+      
+      <div class="section-meta">
+        <span>04</span>
+        <em>positionnement</em>
+      </div>
+      <h2>Le vrai sujet, c&#x27;est le système</h2>
+      <p class="lead">Un article isolé n&#x27;a pas beaucoup de valeur. Un système qui sait produire, publier, corriger et maintenir un lot complet a beaucoup plus de valeur. C&#x27;est pour ça que je pense en workflow : entree, contexte, génération, vérification, correction, publication.</p><div class="callout tip"><b>A retenir</b><p>Chaque étape doit laisser une trace : fichier, capture, statut WordPress, JSON, date ou preuve visuelle.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-05" class="section reveal" data-section="05">
+      
+      <div class="section-meta">
+        <span>05</span>
+        <em>risque</em>
+      </div>
+      <h2>Le piège du contenu automatique faible</h2>
+      <p class="lead">Si je demande seulement &#x27;fais-moi 100 articles&#x27;, j&#x27;obtiens vite du contenu plat. Je veux des articles utiles pour un restaurateur, reliés à des problèmes réels : appels ratés, réservations, avis Google, no-show, privatisations, rush, tableaux de bord et rentabilité.</p>
+      <div class="before-after">
+        <article><span>Avant</span><p>Volume sans intention, texte générique, images répétées, maillage absent.</p></article>
+        <article><span>Après</span><p>Plan éditorial, intentions, mots-clés, images dédiées, maillage et correction globale.</p></article>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-06" class="section reveal" data-section="06">
+      
+      <div class="section-meta">
+        <span>06</span>
+        <em>preuve</em>
+      </div>
+      <h2>Ce que je dois pouvoir vérifier</h2>
+      <div class="checklist"><label><input type="checkbox"> <span>Le dossier contient les fichiers de structure et d&#x27;audit.</span></label>
+<label><input type="checkbox"> <span>Codex est lancé dans le bon dossier.</span></label>
+<label><input type="checkbox"> <span>WordPress est ouvert et connecté dans Chrome.</span></label>
+<label><input type="checkbox"> <span>Le plan éditorial contient le maillage interne.</span></label>
+<label><input type="checkbox"> <span>Les dates commencent le 9 juin 2026 à 10h45.</span></label>
+<label><input type="checkbox"> <span>Les articles sont programmés, pas seulement rédigés.</span></label>
+<label><input type="checkbox"> <span>Chaque article a ses images et ses champs SEO.</span></label>
+<label><input type="checkbox"> <span>Les corrections peuvent être appliquées au lot complet.</span></label></div>
+    
+      
+    </section>
+    
+    <section id="section-07" class="section reveal" data-section="07">
+      
+      <div class="section-meta">
+        <span>07</span>
+        <em>méthode</em>
+      </div>
+      <h2>Je garde toujours une boucle courte</h2>
+      <p class="lead">Je ne laisse pas l&#x27;agent partir trop loin sans preuve. Je lance une action, je contrôle, je corrige, puis j&#x27;élargis. C&#x27;est valable pour un article, pour les images, pour le planning et pour les corrections finales.</p><div class="table-wrap"><table><thead><tr><th>Boucle</th><th>Question</th><th>Preuve</th></tr></thead><tbody><tr><td>Contexte</td><td>Codex sait-il où il travaille ?</td><td>Le dossier et les fichiers sont visibles.</td></tr>
+<tr><td>Production</td><td>Le contenu respecte-t-il la structure ?</td><td>Un article test s&#x27;affiche correctement.</td></tr>
+<tr><td>Publication</td><td>WordPress a-t-il les bons statuts ?</td><td>Les articles sont en futur/programmé.</td></tr>
+<tr><td>Correction</td><td>Le ton correspond-il à la cible ?</td><td>Le contenu ne sonne plus template.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-08" class="section split reveal" data-section="08">
+      <div>
+      <div class="section-meta">
+        <span>08</span>
+        <em>dossier</em>
+      </div>
+      <h2>Je repère les dossiers utiles</h2>
+      <p class="lead">Je commence par ranger le contexte. Le dossier blog doit contenir ce qui permet à Codex de comprendre la stratégie, l&#x27;audit SEO, les fichiers de structure et les livrables à produire. Cette étape paraît simple, mais elle évite beaucoup de confusion plus tard.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/01-01-depart-dossier-blog.jpg" alt="Je pars du dossier de formation et je repere les dossiers utiles pour le blog." loading="lazy">
+        <figcaption><span>Capture 01</span>Je pars du dossier de formation et je repère les dossiers utiles pour le blog.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-09" class="section split image-first reveal" data-section="09">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/02-02-deplacement-structure-blog.jpg" alt="Je glisse la structure du blog et l&#x27;audit SEO dans le bon dossier de travail." loading="lazy">
+        <figcaption><span>Capture 02</span>Je glisse la structure du blog et l&#x27;audit SEO dans le bon dossier de travail.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>09</span>
+        <em>rangement</em>
+      </div>
+      <h2>Je déplace la structure et l&#x27;audit SEO</h2>
+      <p class="lead">Je glisse les éléments de structure du blog et l&#x27;audit SEO dans le même espace. Je veux que Codex puisse lire le contexte sans avoir à deviner ou chercher dans toute la formation.</p><div class="callout tip"><b>Preuve</b><p>Je vois les dossiers et fichiers dans le Finder avant de lancer Codex.</p></div>
+    </div>
+    </section>
+        
+    <section id="section-10" class="section reveal" data-section="10">
+      
+      <div class="section-meta">
+        <span>10</span>
+        <em>règle</em>
+      </div>
+      <h2>Un bon dossier vaut mieux qu&#x27;un long prompt</h2>
+      <p class="lead">Le prompt aide, mais les fichiers font foi. Quand l&#x27;audit, les captures, la structure et les consignes sont au bon endroit, Codex peut croiser les informations au lieu d&#x27;inventer un sujet au hasard.</p><div class="checklist"><label><input type="checkbox"> <span>Dossier blog ouvert</span></label>
+<label><input type="checkbox"> <span>Audit SEO copie</span></label>
+<label><input type="checkbox"> <span>Structure RestIA disponible</span></label>
+<label><input type="checkbox"> <span>Terminal lancé depuis ce dossier</span></label></div>
+    
+      
+    </section>
+    
+    <section id="section-11" class="section split reveal" data-section="11">
+      <div>
+      <div class="section-meta">
+        <span>11</span>
+        <em>terminal</em>
+      </div>
+      <h2>Je lance Codex depuis le bon dossier</h2>
+      <p class="lead">Je crée un nouveau terminal dans le dossier. Le détail important : je ne lance pas Codex depuis le bureau ou depuis un ancien projet. Je veux que toutes les lectures, sorties et corrections restent dans le dossier de la séance.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/03-03-terminal-codex-yolo.jpg" alt="Je lance Codex depuis le dossier 03-blog, en mode rapide, avec le bon contexte." loading="lazy">
+        <figcaption><span>Capture 03</span>Je lance Codex depuis le dossier 03-blog, en mode rapide, avec le bon contexte.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-12" class="section reveal" data-section="12">
+      
+      <div class="section-meta">
+        <span>12</span>
+        <em>mode rapide</em>
+      </div>
+      <h2>Le mode YOLO accélère, mais il ne pardonne pas le flou</h2>
+      <p class="lead">Je peux utiliser un mode rapide parce que je suis dans un environnement de confiance. Mais ce choix impose une discipline : mission claire, dossier propre, pas de secret inutile, vérification régulière.</p><div class="callout warning"><b>Attention</b><p>Si tu n&#x27;es pas sûr du dossier ou du contenu, reste sur un mode plus contrôle.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-13" class="section reveal" data-section="13">
+      
+      <div class="section-meta">
+        <span>13</span>
+        <em>prompt</em>
+      </div>
+      <h2>J&#x27;ouvre WordPress dans Chrome</h2>
+      <p class="lead">Je demande à Codex d&#x27;ouvrir le site dans le navigateur. Le but est de travailler directement dans WordPress, avec l&#x27;admin réel, au lieu de rester dans une simulation.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - ouvrir WordPress</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        <p class="prompt-note">Je l&#x27;utilise pour connecter Codex à la page WordPress cible.</p>
+        <pre><code>ouvre un navigateur chrome sur cette page stp
+https://restia.fun/wp-admin/edit.php?post_type=page</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-14" class="section split image-first reveal" data-section="14">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/04-04-connexion-wordpress-mcp.jpg" alt="Je connecte WordPress dans Chrome pour que Codex travaille dans l&#x27;admin reel." loading="lazy">
+        <figcaption><span>Capture 04</span>Je connecte WordPress dans Chrome pour que Codex travaille dans l&#x27;admin réel.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>14</span>
+        <em>connexion</em>
+      </div>
+      <h2>Je me connecte à WordPress</h2>
+      <p class="lead">Je renseigne le compte, je teste le mot de passe et j&#x27;arrive dans l&#x27;admin. À partir de la, Codex peut naviguer, lire les pages, inspecter les articles et vérifier ce que WordPress affiche vraiment.</p>
+    </div>
+    </section>
+        
+    <section id="section-15" class="section reveal" data-section="15">
+      
+      <div class="section-meta">
+        <span>15</span>
+        <em>mcp</em>
+      </div>
+      <h2>Je travaille dans l&#x27;interface réelle</h2>
+      <p class="lead">L&#x27;intérêt du MCP/Chrome, c&#x27;est que je peux vérifier les effets concrets. Si Codex crée un article, je le vois dans WordPress. Si la date est mauvaise, je le vois. Si l&#x27;image manque, je le vois aussi.</p><div class="card-grid cols-3"><article><b>Fichier</b><p>Codex prépare les données.</p></article>
+<article><b>WordPress</b><p>Codex publié ou programme.</p></article>
+<article><b>Navigateur</b><p>Je contrôle le rendu final.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-16" class="section split reveal" data-section="16">
+      <div>
+      <div class="section-meta">
+        <span>16</span>
+        <em>analyse</em>
+      </div>
+      <h2>Je demande l&#x27;analyse de la structure du blog</h2>
+      <p class="lead">Avant d&#x27;écrire, Codex doit comprendre le blog : archive, template, champs, catégories, images, SEO, sommaire, articles liés. Sinon il peut produire un article propre mais inutilisable dans ma structure.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - analyser la structure</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Analyse la structure actuelle de mon blog RestIA.
+Regarde les pages, les articles, les champs WordPress, les éléments SEO, les images et les fichiers présents dans le dossier.
+Je veux que tu comprennes la structure avant de créer ou publier quoi que ce soit.</code></pre>
+      </div>
+    
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/05-05-analyse-structure-blog.jpg" alt="Je demande a Codex d&#x27;analyser la structure existante avant de creer des articles." loading="lazy">
+        <figcaption><span>Capture 05</span>Je demande à Codex d&#x27;analyser la structure existante avant de créer des articles.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-17" class="section split image-first reveal" data-section="17">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/06-06-documents-blog-restia.jpg" alt="Je fournis les documents de structure RestIA et les fichiers SEO deja prepares." loading="lazy">
+        <figcaption><span>Capture 06</span>Je fournis les documents de structure RestIA et les fichiers SEO déjà préparés.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>17</span>
+        <em>documents</em>
+      </div>
+      <h2>Je donne les fichiers RestIA et SEO</h2>
+      <p class="lead">Je fournis les documents qui expliquent la structure. C&#x27;est une façon simple de transformer Codex en exécutant technique : il lit le contexte, puis il agit dans ce cadre.</p>
+    </div>
+    </section>
+        
+    <section id="section-18" class="section reveal" data-section="18">
+      
+      <div class="section-meta">
+        <span>18</span>
+        <em>contrôle</em>
+      </div>
+      <h2>Je vérifie que Codex a compris le périmètre</h2>
+      <div class="table-wrap"><table><thead><tr><th>Element</th><th>Pourquoi je le donne</th><th>Contrôle</th></tr></thead><tbody><tr><td>Structure blog</td><td>Garder le même rendu que la séance precedente.</td><td>L&#x27;article s&#x27;affiche dans le bon template.</td></tr>
+<tr><td>Audit SEO</td><td>Choisir des sujets utiles, pas aleatoires.</td><td>Le titre vise un besoin réel.</td></tr>
+<tr><td>WordPress</td><td>Publier avec les bons champs.</td><td>Le statut et les dates sont corrects.</td></tr>
+<tr><td>Images</td><td>Préparer le SEO média.</td><td>Alt, titre et légende sont remplis.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-19" class="section reveal" data-section="19">
+      
+      <div class="section-meta">
+        <span>19</span>
+        <em>principe</em>
+      </div>
+      <h2>Je valide un article avant de produire le lot</h2>
+      <p class="lead">Je ne lance pas 200 articles tout de suite. Je fais d&#x27;abord un article test pour voir si le système comprend la structure. Une fois la preuve obtenue, je peux passer au plan éditorial et au lot.</p>
+      <div class="before-after">
+        <article><span>Avant</span><p>Je génère tout d&#x27;un coup, puis je decouvre 200 erreurs.</p></article>
+        <article><span>Après</span><p>Je teste un article, je corrige, puis j&#x27;élargis.</p></article>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-20" class="section reveal" data-section="20">
+      
+      <div class="section-meta">
+        <span>20</span>
+        <em>check</em>
+      </div>
+      <h2>La checklist avant génération</h2>
+      <div class="checklist"><label><input type="checkbox"> <span>Codex voit le dossier</span></label>
+<label><input type="checkbox"> <span>WordPress est connecte</span></label>
+<label><input type="checkbox"> <span>L&#x27;audit SEO est disponible</span></label>
+<label><input type="checkbox"> <span>La structure blog est connue</span></label>
+<label><input type="checkbox"> <span>Le premier sujet vient de l&#x27;audit</span></label>
+<label><input type="checkbox"> <span>La publication peut être verifiee</span></label></div>
+    
+      
+    </section>
+    
+    <section id="section-21" class="section split reveal" data-section="21">
+      <div>
+      <div class="section-meta">
+        <span>21</span>
+        <em>seo-geo</em>
+      </div>
+      <h2>Je veux des articles utiles pour Google et les moteurs IA</h2>
+      <p class="lead">Je parle de SEO, mais aussi de GEO : l&#x27;article doit pouvoir être compris, cite, résumé et réutilisé par des moteurs IA. Ça demande une structure claire, des réponses directes, des exemples concrets et des sources quand elles sont utiles.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/07-07-strategie-seo-geo.jpg" alt="Je garde la logique SEO + GEO : les articles doivent aider Google et les moteurs IA." loading="lazy">
+        <figcaption><span>Capture 07</span>Je garde la logique SEO + GEO : les articles doivent aider Google et les moteurs IA.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-22" class="section reveal" data-section="22">
+      
+      <div class="section-meta">
+        <span>22</span>
+        <em>prompt article</em>
+      </div>
+      <h2>Je demande un premier article issu de l&#x27;audit</h2>
+      <p class="lead">Ce prompt sert à empêcher Codex de choisir un sujet au hasard. Je veux qu&#x27;il lise l&#x27;audit, récupère un besoin prioritaire, puis prépare un article compatible avec la structure RestIA.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - article test</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Analyse le dossier d&#x27;audit SEO et récupère un sujet pertinent.
+Ne choisis pas un sujet au hasard.
+Prepare un article complet au format réutilisable dans la structure RestIA :
+- contenu HTML ;
+- champs SEO ;
+- liens internes ;
+- sources ;
+- images ;
+- titre, extrait, slug, catégorie.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-23" class="section split image-first reveal" data-section="23">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/08-08-analyse-audit-seo.jpg" alt="Je laisse Codex analyser l&#x27;audit SEO pour choisir un sujet coherent." loading="lazy">
+        <figcaption><span>Capture 08</span>Je laisse Codex analyser l&#x27;audit SEO pour choisir un sujet cohérent.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>23</span>
+        <em>audit</em>
+      </div>
+      <h2>Codex analyse l&#x27;audit SEO</h2>
+      <p class="lead">L&#x27;audit donne les mots-clés, les angles, les concurrents et les opportunités. Je veux que le premier article prouve que Codex sait passer de l&#x27;analyse à un contenu publiable.</p>
+    </div>
+    </section>
+        
+    <section id="section-24" class="section reveal" data-section="24">
+      
+      <div class="section-meta">
+        <span>24</span>
+        <em>anti hasard</em>
+      </div>
+      <h2>Je refuse le sujet invente</h2>
+      <p class="lead">Si Codex invente un sujet, je perds la valeur du travail SEO. Je le force à partir du dossier fourni. C&#x27;est une règle simple : le sujet doit venir des données, pas de l&#x27;inspiration du moment.</p><div class="callout tip"><b>Signal de réussite</b><p>Le titre de l&#x27;article doit se relier à un mot-clé, une intention et une page business.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-25" class="section reveal" data-section="25">
+      
+      <div class="section-meta">
+        <span>25</span>
+        <em>format</em>
+      </div>
+      <h2>Le format attendu de l&#x27;article</h2>
+      <div class="table-wrap"><table><thead><tr><th>Bloc</th><th>Rôle</th><th>Vérification</th></tr></thead><tbody><tr><td>Titre + slug</td><td>Cibler le mot-clé et rester lisible.</td><td>Le slug est court et compréhensible.</td></tr>
+<tr><td>Introduction</td><td>Dire vite le problème et la promesse.</td><td>Un restaurateur comprend pourquoi lire.</td></tr>
+<tr><td>Sommaire</td><td>Rendre la page scannable.</td><td>Les ancres pointent vers les bonnes sections.</td></tr>
+<tr><td>Sections</td><td>Repondre concretement.</td><td>Chaque partie apporte une information utile.</td></tr>
+<tr><td>Images</td><td>Illustrer l&#x27;étape ou le contexte.</td><td>Alt, titre et légende existent.</td></tr>
+<tr><td>FAQ</td><td>Repondre aux questions longues.</td><td>Les réponses sont directes.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-26" class="section split reveal" data-section="26">
+      <div>
+      <div class="section-meta">
+        <span>26</span>
+        <em>images</em>
+      </div>
+      <h2>Je contrôle les images des articles</h2>
+      <p class="lead">Je veux des visuels différents pour chaque article. Une image répétée partout affaiblit le rendu et donne une impression de contenu automatique bas de gamme.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/09-09-generation-images-article.jpg" alt="Je controle la generation des images et les champs media associes." loading="lazy">
+        <figcaption><span>Capture 09</span>Je contrôle la génération des images et les champs média associés.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-27" class="section reveal" data-section="27">
+      
+      <div class="section-meta">
+        <span>27</span>
+        <em>prompt image</em>
+      </div>
+      <h2>Je cadre les prompts image</h2>
+      <p class="lead">Le prompt image doit inclure le contexte restaurant, le format, le style et les interdits : pas de texte illisible, pas de logo, pas de watermark. Je veux des images utiles pour expliquer le sujet.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - prompts image</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Pour chaque article, prépare 4 prompts image cohérents avec le sujet.
+Les images doivent être différentes d&#x27;un article à l&#x27;autre.
+Prepare aussi le texte alternatif, le titre, la légende et là description.
+N&#x27;utilise pas une image générique répétée.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-28" class="section reveal" data-section="28">
+      
+      <div class="section-meta">
+        <span>28</span>
+        <em>média seo</em>
+      </div>
+      <h2>Je prépare alt, titre, légende et description</h2>
+      <div class="card-grid cols-4"><article><b>Alt</b><p>Decrit l&#x27;image pour l&#x27;accessibilite et le SEO.</p></article>
+<article><b>Titre média</b><p>Aide a garder une bibliotheque WordPress lisible.</p></article>
+<article><b>Legende</b><p>Explique le lien avec l&#x27;article quand c&#x27;est utile.</p></article>
+<article><b>Description</b><p>Ajoute le contexte sans bourrer de mots-clés.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-29" class="section reveal" data-section="29">
+      
+      <div class="section-meta">
+        <span>29</span>
+        <em>statut</em>
+      </div>
+      <h2>Brouillon ou publication : je choisis la stratégie</h2>
+      <p class="lead">Je peux publier directement, programmer, ou laisser en brouillon. Dans cette séance, je teste la planification parce que je veux un système autonome. Mais pour un client, je peux garder une validation manuelle si le risque éditorial est plus fort.</p><div class="table-wrap"><table><thead><tr><th>Option</th><th>Quand je l&#x27;utilise</th><th>Risque</th></tr></thead><tbody><tr><td>Brouillon</td><td>Le client doit relire chaque article.</td><td>Plus de manuel.</td></tr>
+<tr><td>Programme</td><td>Le ton est valide et la cadence est claire.</td><td>Il faut bien vérifier avant.</td></tr>
+<tr><td>Publie</td><td>Cas très contrôle ou contenu peu risque.</td><td>Erreur visible immediatement.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-30" class="section split image-first reveal" data-section="30">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/10-10-programmation-article.jpg" alt="Je teste la programmation d&#x27;un article dans WordPress avant de passer au lot." loading="lazy">
+        <figcaption><span>Capture 10</span>Je teste la programmation d&#x27;un article dans WordPress avant de passer au lot.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>30</span>
+        <em>programmation</em>
+      </div>
+      <h2>Je teste la programmation WordPress</h2>
+      <p class="lead">Je veux vérifier que Codex sait envoyer un article avec une date future. C&#x27;est une preuve importante : le système ne s&#x27;arrête pas à la rédaction, il sait aller jusqu&#x27;à la publication planifiée.</p>
+    </div>
+    </section>
+        
+    <section id="section-31" class="section split reveal" data-section="31">
+      <div>
+      <div class="section-meta">
+        <span>31</span>
+        <em>parallèle</em>
+      </div>
+      <h2>J&#x27;ouvre l&#x27;audit SEO en parallèle</h2>
+      <p class="lead">Pendant que Codex travaille, je peux ouvrir une autre fenêtre et vérifier les données. Les longues generations ne doivent pas me bloquer. Je garde une posture d&#x27;operateur : je surveille, je prépare, je contrôle.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/11-11-ouverture-audit-seo.jpg" alt="J&#x27;ouvre l&#x27;audit SEO en parallele pour ne pas attendre sans avancer." loading="lazy">
+        <figcaption><span>Capture 11</span>J&#x27;ouvre l&#x27;audit SEO en parallèle pour ne pas attendre sans avancer.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-32" class="section reveal" data-section="32">
+      
+      <div class="section-meta">
+        <span>32</span>
+        <em>productivite</em>
+      </div>
+      <h2>Je ne reste pas passif pendant les generations</h2>
+      <div class="card-grid cols-3"><article><b>Lire les sorties</b><p>Je regarde si l&#x27;agent suit encore le bon objectif.</p></article>
+<article><b>Préparer le prompt suivant</b><p>Je gagne du temps sur la prochaine étape.</p></article>
+<article><b>Verifier les fichiers</b><p>Je confirme que les livrables apparaissent.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-33" class="section split image-first reveal" data-section="33">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/12-12-cle-api-one-shot.jpg" alt="Je cree une cle API temporaire, puis je la masque et je prevois de la supprimer." loading="lazy">
+        <figcaption><span>Capture 12</span>Je crée une clé API temporaire, puis je la masque et je prévois de la supprimer.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>33</span>
+        <em>api</em>
+      </div>
+      <h2>Je crée une clé API temporaire</h2>
+      <p class="lead">La génération d&#x27;images passe par une API. Dans la séance, je crée une clé pour travailler en one-shot. Le point de sécurité : je ne garde pas une clé visible dans un repo, un prompt public ou une capture non masquée.</p>
+    </div>
+    </section>
+        
+    <section id="section-34" class="section reveal" data-section="34">
+      
+      <div class="section-meta">
+        <span>34</span>
+        <em>secret</em>
+      </div>
+      <h2>Je masque les secrets avant publication</h2>
+      <p class="lead">Une clé API ne doit jamais finir dans GitHub Pages. Si elle a été collée dans une conversation ou une capture, je la masque. Si elle a été exposée, je la révoque ou je la remplace.</p><div class="checklist"><label><input type="checkbox"> <span>Clé masquée dans les captures</span></label>
+<label><input type="checkbox"> <span>Aucune clé dans le HTML</span></label>
+<label><input type="checkbox"> <span>Aucune clé dans les prompts</span></label>
+<label><input type="checkbox"> <span>Clé temporaire révoquée si exposée</span></label></div>
+    
+      
+    </section>
+    
+    <section id="section-35" class="section split reveal" data-section="35">
+      <div>
+      <div class="section-meta">
+        <span>35</span>
+        <em>plan</em>
+      </div>
+      <h2>J&#x27;enrichis le plan éditorial</h2>
+      <p class="lead">Le plan éditorial devient le centre du système. Il ne contient pas seulement des titres. Il contient les intentions, les liens, les dates, les prompts image et les briefs utiles pour produire les articles.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/13-13-enrichir-plan-editorial.jpg" alt="J&#x27;enrichis le plan editorial avec les prompts image et les donnees de publication." loading="lazy">
+        <figcaption><span>Capture 13</span>J&#x27;enrichis le plan éditorial avec les prompts image et les données de publication.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-36" class="section reveal" data-section="36">
+      
+      <div class="section-meta">
+        <span>36</span>
+        <em>prompt plan</em>
+      </div>
+      <h2>J&#x27;ajoute maillage et planning</h2>
+      <p class="lead">Ce prompt transforme le plan en outil de production. Je demande explicitement le maillage entre les 20 articles et une cadence qui commence le 9 juin 2026 à 10h45, puis un article tous les 3 jours.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - enrichir le plan</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>okay maintenant tu vas enrichir le plan éditorial pour le SEO.
+Je veux faire du maillage interne entre les 20 articles.
+Rajoute une colonne &quot;Maillage interne recommande&quot;.
+Exemple : article 1 maillage avec page d&#x27;accueil / page service / contact.
+Ensuite article 2 maillage avec article 1, etc.
+Il faut une vraie stratégie pour se lier entre les 20 articles.
+Rajoute egalement une colonne &quot;Planification publication&quot;.
+Ca commence à partir du 9 juin à 10h45.
+Je veux publier un article tous les 3 jours.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-37" class="section reveal" data-section="37">
+      
+      <div class="section-meta">
+        <span>37</span>
+        <em>colonnes</em>
+      </div>
+      <h2>Les colonnes qui changent tout</h2>
+      <div class="table-wrap"><table><thead><tr><th>Colonne</th><th>Pourquoi elle compte</th><th>Exemple</th></tr></thead><tbody><tr><td>Maillage interne recommande</td><td>Evite les articles isoles.</td><td>Page service + article précédent + article complémentaire.</td></tr>
+<tr><td>Planification publication</td><td>Automatise la cadence.</td><td>09/06/2026 10:45.</td></tr>
+<tr><td>Prompt image 1-4</td><td>Prepare la génération média.</td><td>Scène restaurant liée au sujet.</td></tr>
+<tr><td>Brief detaille</td><td>Garde le fond éditorial.</td><td>Problème, cible, preuves, angles.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-38" class="section reveal" data-section="38">
+      
+      <div class="section-meta">
+        <span>38</span>
+        <em>maillage</em>
+      </div>
+      <h2>Je pense les liens comme une architecture</h2>
+      <p class="lead">Le maillage ne consiste pas à mettre des liens partout. Je relie les articles aux pages business, aux articles proches et aux contenus qui expliquent une notion complémentaire.</p><div class="table-wrap"><table><thead><tr><th>Type de lien</th><th>Destination</th><th>But</th></tr></thead><tbody><tr><td>Business</td><td>Accueil, tarifs, service, contact</td><td>Convertir ou rassurer.</td></tr>
+<tr><td>Article parent</td><td>Guide large</td><td>Renforcer un sujet pilier.</td></tr>
+<tr><td>Article voisin</td><td>Problème proche</td><td>Continuer la lecture.</td></tr>
+<tr><td>Article preuve</td><td>Cas client ou ROI</td><td>Donner du concret.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-39" class="section reveal" data-section="39">
+      
+      <div class="section-meta">
+        <span>39</span>
+        <em>date</em>
+      </div>
+      <h2>Je fixe une vraie date de départ</h2>
+      <p class="lead">La planification commence le 9 juin 2026 à 10h45. La date absolue évite les confusions de &#x27;demain&#x27; ou &#x27;dans trois jours&#x27;, surtout quand WordPress affiche parfois une heure UTC.</p><div class="callout tip"><b>Point horaire</b><p>Si WordPress est en UTC, 08h45 UTC peut correspondre à 10h45 à Paris en heure d&#x27;été.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-40" class="section reveal" data-section="40">
+      
+      <div class="section-meta">
+        <span>40</span>
+        <em>cadence</em>
+      </div>
+      <h2>Je publié tous les 3 jours</h2>
+      <p class="lead">Une cadence régulière laisse le temps de vérifier, corriger et observer. Pour un premier lot, 20 articles tous les 3 jours donne environ deux mois de publications programmées.</p><div class="table-wrap"><table><thead><tr><th>Article</th><th>Date indicative</th><th>Contrôle</th></tr></thead><tbody><tr><td>A1</td><td>09/06/2026 10:45</td><td>Premier article a vérifier en détail.</td></tr>
+<tr><td>A2</td><td>12/06/2026 10:45</td><td>Maillage vers A1.</td></tr>
+<tr><td>A3</td><td>15/06/2026 10:45</td><td>Maillage vers pages business.</td></tr>
+<tr><td>A20</td><td>05/08/2026 10:45</td><td>Dernier article du lot.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-41" class="section split reveal" data-section="41">
+      <div>
+      <div class="section-meta">
+        <span>41</span>
+        <em>json</em>
+      </div>
+      <h2>Codex extrait le planning en JSON</h2>
+      <p class="lead">Le JSON sert d&#x27;intermédiaire propre entre le tableur, les articles et WordPress. Quand les données sont structurées, Codex peut mapper chaque champ sans tout recalculer à chaque fois.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/14-14-json-mapping-articles.jpg" alt="Codex extrait les donnees du planning pour construire un JSON de production." loading="lazy">
+        <figcaption><span>Capture 14</span>Codex extrait les données du planning pour construire un JSON de production.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-42" class="section reveal" data-section="42">
+      
+      <div class="section-meta">
+        <span>42</span>
+        <em>prompt json</em>
+      </div>
+      <h2>Je demande une extraction structurée</h2>
+      <p class="lead">Je veux un fichier exploitable : 20 entrées, pas 19, pas 21. Chaque entree contient les champs qui serviront à la rédaction, aux images et à la publication.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - JSON de production</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>À partir du plan éditorial enrichi, extrais les données utiles en JSON.
+Chaque entree doit contenir :
+- titre ;
+- slug ;
+- catégorie ;
+- intention ;
+- liens internes recommandes ;
+- date de publication ;
+- prompts image ;
+- champs SEO ;
+- brief de rédaction.
+Verifie que les 20 articles sont présents avant de rédiger.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-43" class="section reveal" data-section="43">
+      
+      <div class="section-meta">
+        <span>43</span>
+        <em>pourquoi json</em>
+      </div>
+      <h2>Le JSON évite les pertes entre les étapes</h2>
+      <div class="card-grid cols-4"><article><b>Planning</b><p>La date et la cadence restent stables.</p></article>
+<article><b>Redaction</b><p>Chaque article garde son brief et son intention.</p></article>
+<article><b>Images</b><p>Les prompts média restent attaches au bon article.</p></article>
+<article><b>WordPress</b><p>Les champs se remplissent de maniere cohérente.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-44" class="section reveal" data-section="44">
+      
+      <div class="section-meta">
+        <span>44</span>
+        <em>longueur</em>
+      </div>
+      <h2>Je règle la longueur sans bloquer le système</h2>
+      <p class="lead">Dans la séance, je vois que l&#x27;agent donne une fourchette large. Je peux ajuster pour éviter des articles trop uniformes. Le but n&#x27;est pas que tous les textes fassent exactement le même nombre de mots, mais qu&#x27;ils couvrent le sujet proprement.</p>
+      <div class="before-after">
+        <article><span>Avant</span><p>Tous les articles font la même taille et sonnent génériques.</p></article>
+        <article><span>Après</span><p>La longueur varie selon l&#x27;intention et le besoin du sujet.</p></article>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-45" class="section reveal" data-section="45">
+      
+      <div class="section-meta">
+        <span>45</span>
+        <em>attente</em>
+      </div>
+      <h2>La génération longue fait partie du process</h2>
+      <p class="lead">Un lot de 20 articles avec images, maillage et champs SEO peut prendre du temps. C&#x27;est normal. Je ne confonds pas lenteur et échec. Je surveille les sorties et je laisse l&#x27;agent finir quand il avance correctement.</p><div class="callout tip"><b>Bon réflexe</b><p>Si la sortie montre des fichiers qui se creent et des contrôles cohérents, je laisse tourner.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-46" class="section reveal" data-section="46">
+      
+      <div class="section-meta">
+        <span>46</span>
+        <em>batch images</em>
+      </div>
+      <h2>Je sépare parfois les images du texte</h2>
+      <p class="lead">Les images peuvent consommer l&#x27;API et provoquer des limites. Je peux d&#x27;abord produire les prompts image, puis lancer la génération en batch plus tard. C&#x27;est plus fiable pour de gros volumes.</p><div class="table-wrap"><table><thead><tr><th>Mode</th><th>Avantage</th><th>Limite</th></tr></thead><tbody><tr><td>Tout en un</td><td>Simple pour un petit lot.</td><td>Risque de rate limit.</td></tr>
+<tr><td>Prompts d&#x27;abord</td><td>Contrôle éditorial avant coût API.</td><td>Une étape en plus.</td></tr>
+<tr><td>Images par lots</td><td>Plus stable.</td><td>Demande un suivi.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-47" class="section reveal" data-section="47">
+      
+      <div class="section-meta">
+        <span>47</span>
+        <em>surveillance</em>
+      </div>
+      <h2>Je lis les sorties au lieu d&#x27;attendre</h2>
+      <div class="checklist"><label><input type="checkbox"> <span>Le nombre d&#x27;articles est correct</span></label>
+<label><input type="checkbox"> <span>Les fichiers JSON existent</span></label>
+<label><input type="checkbox"> <span>Les prompts image sont présents</span></label>
+<label><input type="checkbox"> <span>Le maillage est génère</span></label>
+<label><input type="checkbox"> <span>Les dates sont cohérentes</span></label>
+<label><input type="checkbox"> <span>Aucune erreur bloquante n&#x27;apparaît</span></label></div>
+    
+      
+    </section>
+    
+    <section id="section-48" class="section reveal" data-section="48">
+      
+      <div class="section-meta">
+        <span>48</span>
+        <em>fichier</em>
+      </div>
+      <h2>Le plan devient un fichier de production</h2>
+      <p class="lead">Le fichier enrichi n&#x27;est plus un simple planning. C&#x27;est le document qui pilote la suite : rédaction, images, maillage et publication. C&#x27;est aussi un livrable que je peux montrer à un client.</p><div class="callout tip"><b>Livrable</b><p>Un bon plan éditorial automatise doit être lisible par un humain et exploitable par un agent.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-49" class="section reveal" data-section="49">
+      
+      <div class="section-meta">
+        <span>49</span>
+        <em>sortie</em>
+      </div>
+      <h2>Je contrôle la sortie avant l&#x27;upload</h2>
+      <p class="lead">Avant WordPress, je vérifie que les 20 articles sont bien là, que les images sont prévues, que les champs SEO existent et que les sources ne manquent pas. Je préfère corriger avant l&#x27;upload plutôt qu&#x27;après.</p><div class="card-grid cols-4"><article><b>Nombre</b><p>20 articles présents.</p></article>
+<article><b>Structure</b><p>HTML, résumé, FAQ, sources.</p></article>
+<article><b>Maillage</b><p>Liens internes et externes prevus.</p></article>
+<article><b>Media</b><p>4 blocs image par article.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-50" class="section reveal" data-section="50">
+      
+      <div class="section-meta">
+        <span>50</span>
+        <em>décision</em>
+      </div>
+      <h2>Je passe à WordPress seulement après preuve</h2>
+      <p class="lead">La décision de publier n&#x27;arrive pas au hasard. Je passe à WordPress quand les fichiers sont cohérents, que la structure est complète et que les contrôles de base sont bons.</p><div class="table-wrap"><table><thead><tr><th>Question</th><th>Si oui</th><th>Si non</th></tr></thead><tbody><tr><td>Les 20 articles existent ?</td><td>Je passe au mapping WordPress.</td><td>Je corrige la génération.</td></tr>
+<tr><td>Les dates sont bonnes ?</td><td>Je programme.</td><td>Je recalcule le planning.</td></tr>
+<tr><td>Les images sont pretes ?</td><td>Je les upload.</td><td>Je garde les articles en attente.</td></tr>
+<tr><td>Le ton est valide ?</td><td>Je publié/programme.</td><td>Je corrige avant lot complet.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-51" class="section split reveal" data-section="51">
+      <div>
+      <div class="section-meta">
+        <span>51</span>
+        <em>articles</em>
+      </div>
+      <h2>Les articles sont créés en lot</h2>
+      <p class="lead">Codex annonce les 20 articles, la longueur, les champs, le maillage, les sources et les prompts image. Cette sortie est importante : elle me dit ce qui existe vraiment avant l&#x27;integration WordPress.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/15-15-articles-rediges-maillage.jpg" alt="Les 20 articles sont crees avec structure, maillage, sources et blocs image." loading="lazy">
+        <figcaption><span>Capture 15</span>Les 20 articles sont créés avec structure, maillage, sources et blocs image.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-52" class="section split image-first reveal" data-section="52">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/16-16-publication-wordpress.jpg" alt="Les articles sont integres dans WordPress et programmes a la bonne cadence." loading="lazy">
+        <figcaption><span>Capture 16</span>Les articles sont intégrés dans WordPress et programmés à la bonne cadence.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>52</span>
+        <em>wordpress</em>
+      </div>
+      <h2>Je programme les articles dans WordPress</h2>
+      <p class="lead">L&#x27;objectif est que WordPress contienne les articles en statut futur, avec la bonne date. Je ne veux pas une pile de fichiers locaux qui restent inutilisés.</p>
+    </div>
+    </section>
+        
+    <section id="section-53" class="section reveal" data-section="53">
+      
+      <div class="section-meta">
+        <span>53</span>
+        <em>prompt publish</em>
+      </div>
+      <h2>Je donne la consigne de publication</h2>
+      <p class="lead">Ce prompt sert à pousser les articles dans WordPress sans oublier les champs importants. Je garde la demande explicite : titre, slug, catégorie, extrait, contenu, images, SEO, liens et statut programmé.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - publication WordPress</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Publie les articles dans WordPress en respectant le planning.
+Chaque article doit avoir :
+- le bon titre ;
+- le slug ;
+- la catégorie ;
+- l&#x27;extrait ;
+- le contenu ;
+- les images ;
+- les champs SEO ;
+- les liens internes ;
+- le statut programmé à la bonne date.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-54" class="section reveal" data-section="54">
+      
+      <div class="section-meta">
+        <span>54</span>
+        <em>champs</em>
+      </div>
+      <h2>Les champs WordPress a controler</h2>
+      <div class="table-wrap"><table><thead><tr><th>Champ</th><th>Pourquoi</th><th>Erreur frequente</th></tr></thead><tbody><tr><td>Titre</td><td>Cible le sujet et la requete.</td><td>Titre trop long ou trop SEO brut.</td></tr>
+<tr><td>Slug</td><td>Rend l&#x27;URL lisible.</td><td>Slug coupe ou accentue bizarrement.</td></tr>
+<tr><td>Categorie</td><td>Classe le blog.</td><td>Article sans catégorie.</td></tr>
+<tr><td>Extrait</td><td>Sert aux cartes et au SEO.</td><td>Texte trop générique.</td></tr>
+<tr><td>Image mise en avant</td><td>Structure le rendu.</td><td>Image manquante ou dupliquee.</td></tr>
+<tr><td>Date</td><td>Active la cadence.</td><td>Fuseau horaire mal compris.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-55" class="section reveal" data-section="55">
+      
+      <div class="section-meta">
+        <span>55</span>
+        <em>média manquant</em>
+      </div>
+      <h2>Je note ce qui n&#x27;est pas encore fait</h2>
+      <p class="lead">Codex peut rédiger les articles avant d&#x27;avoir génère les 80 images. Ce n&#x27;est pas grave si je le sais. Le problème serait de penser que tout est fini alors qu&#x27;une partie média reste à produire.</p><div class="callout warning"><b>Contrôle</b><p>Je distingue toujours : article rédigé, image promptée, image générée, image uploadée.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-56" class="section split reveal" data-section="56">
+      <div>
+      <div class="section-meta">
+        <span>56</span>
+        <em>liste</em>
+      </div>
+      <h2>Je vérifie la liste des articles</h2>
+      <p class="lead">Dans WordPress, je regarde les statuts, les catégories, les mots-clés, les dates et les images. C&#x27;est la preuve que le lot est intégré, pas seulement prépare localement.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/17-17-verification-article.jpg" alt="Je verifie la liste WordPress : statut, categorie, mots-cles, dates et images." loading="lazy">
+        <figcaption><span>Capture 17</span>Je vérifie la liste WordPress : statut, catégorie, mots-clés, dates et images.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-57" class="section split image-first reveal" data-section="57">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/18-18-articles-planifies.jpg" alt="Je controle un article public pour verifier le rendu final cote lecteur." loading="lazy">
+        <figcaption><span>Capture 18</span>Je contrôle un article public pour vérifier le rendu final côté lecteur.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>57</span>
+        <em>rendu</em>
+      </div>
+      <h2>Je contrôle un article côté lecteur</h2>
+      <p class="lead">Je clique dans un article et je regarde le rendu : hero, image, titre, texte, sommaire, sections, fin d&#x27;article. Je veux voir ce que l&#x27;élève ou le client verra vraiment.</p>
+    </div>
+    </section>
+        
+    <section id="section-58" class="section reveal" data-section="58">
+      
+      <div class="section-meta">
+        <span>58</span>
+        <em>contrôle rendu</em>
+      </div>
+      <h2>La grille de vérification lecteur</h2>
+      <div class="checklist"><label><input type="checkbox"> <span>Le titre ne deborde pas</span></label>
+<label><input type="checkbox"> <span>L&#x27;image est cohérente</span></label>
+<label><input type="checkbox"> <span>Le sommaire fonctionne</span></label>
+<label><input type="checkbox"> <span>Le texte est lisible</span></label>
+<label><input type="checkbox"> <span>Le ton parle à la cible</span></label>
+<label><input type="checkbox"> <span>Les liens ont du sens</span></label>
+<label><input type="checkbox"> <span>La conclusion ne sonne pas template</span></label>
+<label><input type="checkbox"> <span>La page est correcte sur mobile</span></label></div>
+    
+      
+    </section>
+    
+    <section id="section-59" class="section reveal" data-section="59">
+      
+      <div class="section-meta">
+        <span>59</span>
+        <em>volume</em>
+      </div>
+      <h2>Je n&#x27;envoie pas 200 articles sans test</h2>
+      <p class="lead">Si je génère directement 200 articles dans WordPress, la correction devient plus lourde. Avec 20 articles, je vois le résultat, je corrige le prompt, puis je peux passer à 100, 200 ou 300 avec plus de confiance.</p>
+      <div class="before-after">
+        <article><span>Avant</span><p>Je decouvre l&#x27;erreur après un gros lot.</p></article>
+        <article><span>Après</span><p>Je corrige la logique sur un petit lot et je relance proprement.</p></article>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-60" class="section reveal" data-section="60">
+      
+      <div class="section-meta">
+        <span>60</span>
+        <em>fuseau</em>
+      </div>
+      <h2>Je clarifie le fuseau horaire</h2>
+      <p class="lead">Dans la séance, la question de 08h45 / 10h45 apparaît. Je garde des dates absolues et je vérifie le fuseau WordPress. Le 9 juin 2026 à 10h45 à Paris peut s&#x27;afficher différemment si l&#x27;admin est en UTC.</p><div class="callout tip"><b>Preuve</b><p>L&#x27;article doit être programme à l&#x27;heure voulue côté lecteur ou côté calendrier éditorial.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-61" class="section split reveal" data-section="61">
+      <div>
+      <div class="section-meta">
+        <span>61</span>
+        <em>ton</em>
+      </div>
+      <h2>Je repère les phrases trop template</h2>
+      <p class="lead">Le premier lot est techniquement bon, mais certaines phrases ne me plaisent pas. Elles sonnent comme des consignes internes ou comme du contenu trop commercial. C&#x27;est exactement le genre de problème qu&#x27;il faut détecter avant de produire plus.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/19-19-correction-ton-template.jpg" alt="Je repere les phrases trop template et je prepare une correction globale." loading="lazy">
+        <figcaption><span>Capture 19</span>Je repère les phrases trop template et je prépare une correction globale.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-62" class="section reveal" data-section="62">
+      
+      <div class="section-meta">
+        <span>62</span>
+        <em>problème</em>
+      </div>
+      <h2>Le vrai problème n&#x27;est pas seulement une phrase</h2>
+      <p class="lead">Je ne veux pas supprimer une ligne et garder le même ton partout. Je veux comprendre ce qui cloche : formulations artificielles, mentions RestIA trop visibles, blocs de contrôle internes, ancres mal générées, liens qui ne servent pas.</p><div class="card-grid cols-4"><article><b>Structure</b><p>Elle est bonne, je la garde.</p></article>
+<article><b>Ton</b><p>Il doit devenir plus naturel.</p></article>
+<article><b>Liens</b><p>Ils doivent être utiles et fonctionnels.</p></article>
+<article><b>Images</b><p>Je ne les cassé pas pendant la correction.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-63" class="section split image-first reveal" data-section="63">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/20-20-diagnostic-probleme.jpg" alt="Je demande a Codex de comprendre le vrai probleme editorial avant de corriger." loading="lazy">
+        <figcaption><span>Capture 20</span>Je demande à Codex de comprendre le vrai problème éditorial avant de corriger.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>63</span>
+        <em>diagnostic</em>
+      </div>
+      <h2>Je demande un diagnostic avant correction</h2>
+      <p class="lead">La bonne demande : comprendre le vrai problème. Si Codex détecte les memes points que moi, je peux lui confier la correction globale avec plus de confiance.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - diagnostic éditorial</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Comprends le vrai problème des articles.
+Ne corrige pas seulement une phrase.
+Analyse ce qui sonne trop template, trop commercial ou trop artificiel.
+Fais-moi un récap clair avant de modifier.</code></pre>
+      </div>
+    
+    </div>
+    </section>
+        
+    <section id="section-64" class="section reveal" data-section="64">
+      
+      <div class="section-meta">
+        <span>64</span>
+        <em>lecture</em>
+      </div>
+      <h2>Je compare le bon et le mauvais signal</h2>
+      <div class="table-wrap"><table><thead><tr><th>Signal</th><th>Mauvais</th><th>Bon</th></tr></thead><tbody><tr><td>Ton</td><td>Phrase marketing vague.</td><td>Conseil concret pour restaurateur.</td></tr>
+<tr><td>Mention marque</td><td>RestIA parle de RestIA.</td><td>L&#x27;article aide sans s&#x27;auto-promouvoir.</td></tr>
+<tr><td>Bloc interne</td><td>Points de contrôle visibles.</td><td>Aucune note de production publiée.</td></tr>
+<tr><td>Lien</td><td>Ancre mecanique ou cassee.</td><td>Lien utile dans le parcours de lecture.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-65" class="section reveal" data-section="65">
+      
+      <div class="section-meta">
+        <span>65</span>
+        <em>correction</em>
+      </div>
+      <h2>Je corrige le lot sans casser la structure</h2>
+      <p class="lead">Je demande une correction globale des 20 articles déjà planifiés. Je précise ce qui doit rester : images, dates, slugs, catégories, champs SEO. La correction vise le texte et les blocs problematiques, pas tout le système.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - correction globale</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Corrige les 20 articles déjà planifiés.
+Garde la structure, les images, les dates, les slugs, les catégories et les champs SEO.
+Supprime les passages qui sonnent comme des consignes internes.
+Reecris le contenu dans un ton plus naturel, concret et utile pour un restaurateur.
+Ne mentionne pas RestIA à la troisieme personne dans le contenu.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-66" class="section split reveal" data-section="66">
+      <div>
+      <div class="section-meta">
+        <span>66</span>
+        <em>version</em>
+      </div>
+      <h2>Je contrôle la version corrigée</h2>
+      <p class="lead">La nouvelle version correspond davantage a ce que je veux : ton plus naturel, contenu moins template, structure conservee. Je ne cherche pas la perfection abstraite. Je cherche un résultat exploitable.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/21-21-version-corrigee.jpg" alt="La version corrigee correspond davantage au ton attendu." loading="lazy">
+        <figcaption><span>Capture 21</span>La version corrigée correspond davantage au ton attendu.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-67" class="section split image-first reveal" data-section="67">
+      <div>
+      <figure class="shot">
+        <img src="assets/images/22-22-probleme-liens.jpg" alt="Je controle les blocs de fin d&#x27;article et les liens qui peuvent poser probleme." loading="lazy">
+        <figcaption><span>Capture 22</span>Je contrôle les blocs de fin d&#x27;article et les liens qui peuvent poser problème.</figcaption>
+      </figure>
+    </div>
+      <div>
+      <div class="section-meta">
+        <span>67</span>
+        <em>liens</em>
+      </div>
+      <h2>Je repère les liens qui ne fonctionnent pas</h2>
+      <p class="lead">Après la correction, je contrôle encore. Des liens de redirection ou des blocs de fin peuvent poser problème. La structure est bonne, mais je veux nettoyer ce qui n&#x27;apporte rien au lecteur.</p>
+    </div>
+    </section>
+        
+    <section id="section-68" class="section reveal" data-section="68">
+      
+      <div class="section-meta">
+        <span>68</span>
+        <em>prompt liens</em>
+      </div>
+      <h2>Je retire les liens problematiques</h2>
+      <p class="lead">Je ne refais pas tous les articles. Je cible le problème transversal : liens cassés ou blocs inutiles. C&#x27;est l&#x27;avantage d&#x27;avoir les articles dans un système modifiable.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Prompt à copier - retirer les liens</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Les liens de redirection ne fonctionnent pas.
+Retire les liens ou blocs concernes de tous les articles.
+Ne touche pas au reste de la structure.
+Verifie ensuite qu&#x27;il ne reste plus de lien cassé visible dans les articles.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-69" class="section reveal" data-section="69">
+      
+      <div class="section-meta">
+        <span>69</span>
+        <em>conserver</em>
+      </div>
+      <h2>Je conserve ce qui marche</h2>
+      <div class="card-grid cols-3"><article><b>Dates</b><p>Je ne change pas la planification déjà validee.</p></article>
+<article><b>Images</b><p>Je garde les médias et leurs champs.</p></article>
+<article><b>Slugs</b><p>Je ne cassé pas les URL prévues.</p></article>
+<article><b>Categories</b><p>Je garde le classement WordPress.</p></article>
+<article><b>SEO</b><p>Je conserve les champs importants.</p></article>
+<article><b>Structure</b><p>Je garde le template et le sommaire.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-70" class="section reveal" data-section="70">
+      
+      <div class="section-meta">
+        <span>70</span>
+        <em>wordpress avantage</em>
+      </div>
+      <h2>WordPress rend la correction en lot pratique</h2>
+      <p class="lead">Par rapport à un workflow ferme, WordPress me laisse reprendre les articles déjà créés. Je peux demander à Codex de modifier le lot, vérifier dans l&#x27;admin, puis controler une page publique.</p>
+      <div class="before-after">
+        <article><span>Avant</span><p>Un workflow externe a génère des pages difficiles a reprendre.</p></article>
+        <article><span>Après</span><p>WordPress contient les articles et Codex peut les corriger directement.</p></article>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-71" class="section split reveal" data-section="71">
+      <div>
+      <div class="section-meta">
+        <span>71</span>
+        <em>business</em>
+      </div>
+      <h2>La méthode devient une prestation</h2>
+      <p class="lead">Ce système peut être vendu : audit SEO/GEO, plan éditorial, génération, publication, correction, maintenance. Dans la séance, je donne l&#x27;exemple d&#x27;un projet blog automatique facturé autour de 4 500 a 4 800 euros, avec une maintenance mensuelle autour de 99 euros.</p>
+    </div>
+      <div>
+      <figure class="shot">
+        <img src="assets/images/23-23-valeur-business-systeme.jpg" alt="Je relie la methode a une prestation client rentable et maintenable." loading="lazy">
+        <figcaption><span>Capture 23</span>Je relie la méthode à une prestation client rentable et maintenable.</figcaption>
+      </figure>
+    </div>
+    </section>
+        
+    <section id="section-72" class="section reveal" data-section="72">
+      
+      <div class="section-meta">
+        <span>72</span>
+        <em>offre</em>
+      </div>
+      <h2>Ce que je peux vendre clairement</h2>
+      <div class="card-grid cols-4"><article><b>Setup</b><p>Structure WordPress, champs, prompts, templates.</p></article>
+<article><b>Production</b><p>Plan éditorial, articles, images, maillage.</p></article>
+<article><b>Contrôle</b><p>Vérification SEO, ton, liens, statut.</p></article>
+<article><b>Maintenance</b><p>Corrections, nouveaux lots, suivi des publications.</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-73" class="section reveal" data-section="73">
+      
+      <div class="section-meta">
+        <span>73</span>
+        <em>valeur</em>
+      </div>
+      <h2>La valeur vient de la correction possible</h2>
+      <p class="lead">Un système automatique qui ne se corrige pas est dangereux. Ici, la valeur vient du fait que je peux reprendre 20, 100 ou 300 articles avec une consigne claire. L&#x27;automatisation reste pilotable.</p><div class="callout tip"><b>Phrase clé</b><p>Je ne vends pas seulement du contenu. Je vends une capacité de production et de correction.</p></div>
+    
+      
+    </section>
+    
+    <section id="section-74" class="section reveal" data-section="74">
+      
+      <div class="section-meta">
+        <span>74</span>
+        <em>modele</em>
+      </div>
+      <h2>Le workflow réutilisable</h2>
+      <div class="table-wrap"><table><thead><tr><th>Étape</th><th>Entrée</th><th>Sortie</th></tr></thead><tbody><tr><td>Audit</td><td>Mots-cles, concurrents, intentions</td><td>Opportunites priorisées</td></tr>
+<tr><td>Plan</td><td>Clusters et sujets</td><td>Planning + maillage</td></tr>
+<tr><td>Génération</td><td>Briefs + prompts</td><td>Articles + images</td></tr>
+<tr><td>Publication</td><td>JSON + WordPress</td><td>Articles programmés</td></tr>
+<tr><td>QA</td><td>Rendu + admin</td><td>Corrections globales</td></tr>
+<tr><td>Maintenance</td><td>Retours client</td><td>Nouveaux lots propres</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-75" class="section reveal" data-section="75">
+      
+      <div class="section-meta">
+        <span>75</span>
+        <em>check finale</em>
+      </div>
+      <h2>La checklist de reproduction</h2>
+      <div class="checklist"><label><input type="checkbox"> <span>Je place les fichiers SEO et structure dans le dossier blog.</span></label>
+<label><input type="checkbox"> <span>Je lance Codex depuis ce dossier.</span></label>
+<label><input type="checkbox"> <span>Je connecte WordPress via Chrome/MCP.</span></label>
+<label><input type="checkbox"> <span>Je demande l&#x27;analyse de la structure avant génération.</span></label>
+<label><input type="checkbox"> <span>Je crée un article test issu de l&#x27;audit.</span></label>
+<label><input type="checkbox"> <span>J&#x27;enrichis le plan avec maillage et planning.</span></label>
+<label><input type="checkbox"> <span>Je génère les articles et les prompts image.</span></label>
+<label><input type="checkbox"> <span>Je publié ou programme dans WordPress.</span></label>
+<label><input type="checkbox"> <span>Je vérifie un article public.</span></label>
+<label><input type="checkbox"> <span>Je corrige le ton et les liens en lot.</span></label></div>
+    
+      
+    </section>
+    
+    <section id="section-76" class="section reveal" data-section="76">
+      
+      <div class="section-meta">
+        <span>76</span>
+        <em>bibliotheque</em>
+      </div>
+      <h2>Tous les prompts de la séance</h2>
+      <p class="lead">Tu peux repartir de ces prompts et les adapter a ton projet. Remplace RestIA par ton site, ton secteur, ton audit SEO et ta cadence de publication.</p>
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Ouvrir WordPress</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>ouvre un navigateur chrome sur cette page stp
+https://restia.fun/wp-admin/edit.php?post_type=page</code></pre>
+      </div>
+    
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Analyser la structure</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Analyse la structure actuelle de mon blog RestIA.
+Regarde les pages, les articles, les champs WordPress, les éléments SEO, les images et les fichiers présents dans le dossier.
+Je veux que tu comprennes la structure avant de créer ou publier quoi que ce soit.</code></pre>
+      </div>
+    
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Article test</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Analyse le dossier d&#x27;audit SEO et récupère un sujet pertinent.
+Ne choisis pas un sujet au hasard.
+Prepare un article complet au format réutilisable dans la structure RestIA :
+- contenu HTML ;
+- champs SEO ;
+- liens internes ;
+- sources ;
+- images ;
+- titre, extrait, slug, catégorie.</code></pre>
+      </div>
+    
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Enrichir le plan</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>okay maintenant tu vas enrichir le plan éditorial pour le SEO.
+Je veux faire du maillage interne entre les 20 articles.
+Rajoute une colonne &quot;Maillage interne recommande&quot;.
+Exemple : article 1 maillage avec page d&#x27;accueil / page service / contact.
+Ensuite article 2 maillage avec article 1, etc.
+Il faut une vraie stratégie pour se lier entre les 20 articles.
+Rajoute egalement une colonne &quot;Planification publication&quot;.
+Ca commence à partir du 9 juin à 10h45.
+Je veux publier un article tous les 3 jours.</code></pre>
+      </div>
+    
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Publier dans WordPress</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Publie les articles dans WordPress en respectant le planning.
+Chaque article doit avoir :
+- le bon titre ;
+- le slug ;
+- la catégorie ;
+- l&#x27;extrait ;
+- le contenu ;
+- les images ;
+- les champs SEO ;
+- les liens internes ;
+- le statut programmé à la bonne date.</code></pre>
+      </div>
+    
+
+      <div class="prompt-card">
+        <div class="prompt-head">
+          <span>Corriger le lot</span>
+          <button class="copy-btn" type="button">Copier</button>
+        </div>
+        
+        <pre><code>Corrige les 20 articles déjà planifiés.
+Garde la structure, les images, les dates, les slugs, les catégories et les champs SEO.
+Supprime les passages qui sonnent comme des consignes internes.
+Reecris le contenu dans un ton plus naturel, concret et utile pour un restaurateur.
+Ne mentionne pas RestIA à la troisieme personne dans le contenu.</code></pre>
+      </div>
+    
+    
+      
+    </section>
+    
+    <section id="section-77" class="section reveal" data-section="77">
+      
+      <div class="section-meta">
+        <span>77</span>
+        <em>transcription</em>
+      </div>
+      <h2>Les fichiers de transcription sont disponibles</h2>
+      <p class="lead">J&#x27;ai transcrit la vidéo, puis j&#x27;ai sépare la transcription brute, les moments importants et les segments JSON. La transcription brute garde les erreurs de reconnaissance quand Whisper a mal entendu, mais elle donne le fil complet de la séance.</p><div class="card-grid cols-3"><article><b>Transcription brute</b><p>transcription/transcription_brute.txt</p></article>
+<article><b>Moments importants</b><p>transcription/moments_importants.md</p></article>
+<article><b>Segments JSON</b><p>transcription/segments.json</p></article></div>
+    
+      
+    </section>
+    
+    <section id="section-78" class="section reveal" data-section="78">
+      
+      <div class="section-meta">
+        <span>78</span>
+        <em>captures</em>
+      </div>
+      <h2>Les 23 captures utilisées</h2>
+      <p class="lead">Toutes les images du support viennent de la vidéo fournie. Aucune image externe, aucune image stock, aucune image générée n&#x27;a été ajoutée.</p><div class="gallery"><figure><img src="assets/images/01-01-depart-dossier-blog.jpg" alt="Je pars du dossier de formation et je repere les dossiers utiles pour le blog." loading="lazy"><figcaption>01. Je pars du dossier de formation et je repère les dossiers utiles pour le blog.</figcaption></figure>
+<figure><img src="assets/images/02-02-deplacement-structure-blog.jpg" alt="Je glisse la structure du blog et l&#x27;audit SEO dans le bon dossier de travail." loading="lazy"><figcaption>02. Je glisse la structure du blog et l&#x27;audit SEO dans le bon dossier de travail.</figcaption></figure>
+<figure><img src="assets/images/03-03-terminal-codex-yolo.jpg" alt="Je lance Codex depuis le dossier 03-blog, en mode rapide, avec le bon contexte." loading="lazy"><figcaption>03. Je lance Codex depuis le dossier 03-blog, en mode rapide, avec le bon contexte.</figcaption></figure>
+<figure><img src="assets/images/04-04-connexion-wordpress-mcp.jpg" alt="Je connecte WordPress dans Chrome pour que Codex travaille dans l&#x27;admin reel." loading="lazy"><figcaption>04. Je connecte WordPress dans Chrome pour que Codex travaille dans l&#x27;admin réel.</figcaption></figure>
+<figure><img src="assets/images/05-05-analyse-structure-blog.jpg" alt="Je demande a Codex d&#x27;analyser la structure existante avant de creer des articles." loading="lazy"><figcaption>05. Je demande à Codex d&#x27;analyser la structure existante avant de créer des articles.</figcaption></figure>
+<figure><img src="assets/images/06-06-documents-blog-restia.jpg" alt="Je fournis les documents de structure RestIA et les fichiers SEO deja prepares." loading="lazy"><figcaption>06. Je fournis les documents de structure RestIA et les fichiers SEO déjà préparés.</figcaption></figure>
+<figure><img src="assets/images/07-07-strategie-seo-geo.jpg" alt="Je garde la logique SEO + GEO : les articles doivent aider Google et les moteurs IA." loading="lazy"><figcaption>07. Je garde la logique SEO + GEO : les articles doivent aider Google et les moteurs IA.</figcaption></figure>
+<figure><img src="assets/images/08-08-analyse-audit-seo.jpg" alt="Je laisse Codex analyser l&#x27;audit SEO pour choisir un sujet coherent." loading="lazy"><figcaption>08. Je laisse Codex analyser l&#x27;audit SEO pour choisir un sujet cohérent.</figcaption></figure>
+<figure><img src="assets/images/09-09-generation-images-article.jpg" alt="Je controle la generation des images et les champs media associes." loading="lazy"><figcaption>09. Je contrôle la génération des images et les champs média associés.</figcaption></figure>
+<figure><img src="assets/images/10-10-programmation-article.jpg" alt="Je teste la programmation d&#x27;un article dans WordPress avant de passer au lot." loading="lazy"><figcaption>10. Je teste la programmation d&#x27;un article dans WordPress avant de passer au lot.</figcaption></figure>
+<figure><img src="assets/images/11-11-ouverture-audit-seo.jpg" alt="J&#x27;ouvre l&#x27;audit SEO en parallele pour ne pas attendre sans avancer." loading="lazy"><figcaption>11. J&#x27;ouvre l&#x27;audit SEO en parallèle pour ne pas attendre sans avancer.</figcaption></figure>
+<figure><img src="assets/images/12-12-cle-api-one-shot.jpg" alt="Je cree une cle API temporaire, puis je la masque et je prevois de la supprimer." loading="lazy"><figcaption>12. Je crée une clé API temporaire, puis je la masque et je prévois de la supprimer.</figcaption></figure>
+<figure><img src="assets/images/13-13-enrichir-plan-editorial.jpg" alt="J&#x27;enrichis le plan editorial avec les prompts image et les donnees de publication." loading="lazy"><figcaption>13. J&#x27;enrichis le plan éditorial avec les prompts image et les données de publication.</figcaption></figure>
+<figure><img src="assets/images/14-14-json-mapping-articles.jpg" alt="Codex extrait les donnees du planning pour construire un JSON de production." loading="lazy"><figcaption>14. Codex extrait les données du planning pour construire un JSON de production.</figcaption></figure>
+<figure><img src="assets/images/15-15-articles-rediges-maillage.jpg" alt="Les 20 articles sont crees avec structure, maillage, sources et blocs image." loading="lazy"><figcaption>15. Les 20 articles sont créés avec structure, maillage, sources et blocs image.</figcaption></figure>
+<figure><img src="assets/images/16-16-publication-wordpress.jpg" alt="Les articles sont integres dans WordPress et programmes a la bonne cadence." loading="lazy"><figcaption>16. Les articles sont intégrés dans WordPress et programmés à la bonne cadence.</figcaption></figure>
+<figure><img src="assets/images/17-17-verification-article.jpg" alt="Je verifie la liste WordPress : statut, categorie, mots-cles, dates et images." loading="lazy"><figcaption>17. Je vérifie la liste WordPress : statut, catégorie, mots-clés, dates et images.</figcaption></figure>
+<figure><img src="assets/images/18-18-articles-planifies.jpg" alt="Je controle un article public pour verifier le rendu final cote lecteur." loading="lazy"><figcaption>18. Je contrôle un article public pour vérifier le rendu final côté lecteur.</figcaption></figure>
+<figure><img src="assets/images/19-19-correction-ton-template.jpg" alt="Je repere les phrases trop template et je prepare une correction globale." loading="lazy"><figcaption>19. Je repère les phrases trop template et je prépare une correction globale.</figcaption></figure>
+<figure><img src="assets/images/20-20-diagnostic-probleme.jpg" alt="Je demande a Codex de comprendre le vrai probleme editorial avant de corriger." loading="lazy"><figcaption>20. Je demande à Codex de comprendre le vrai problème éditorial avant de corriger.</figcaption></figure>
+<figure><img src="assets/images/21-21-version-corrigee.jpg" alt="La version corrigee correspond davantage au ton attendu." loading="lazy"><figcaption>21. La version corrigée correspond davantage au ton attendu.</figcaption></figure>
+<figure><img src="assets/images/22-22-probleme-liens.jpg" alt="Je controle les blocs de fin d&#x27;article et les liens qui peuvent poser probleme." loading="lazy"><figcaption>22. Je contrôle les blocs de fin d&#x27;article et les liens qui peuvent poser problème.</figcaption></figure>
+<figure><img src="assets/images/23-23-valeur-business-systeme.jpg" alt="Je relie la methode a une prestation client rentable et maintenable." loading="lazy"><figcaption>23. Je relie la méthode à une prestation client rentable et maintenable.</figcaption></figure></div>
+    
+      
+    </section>
+    
+    <section id="section-79" class="section reveal" data-section="79">
+      
+      <div class="section-meta">
+        <span>79</span>
+        <em>entrainement</em>
+      </div>
+      <h2>Ce que tu dois refaire dans ton projet</h2>
+      <p class="lead">La compétence n&#x27;est pas de mémoriser chaque clic. La compétence est de savoir cadrer un agent IA pour produire un système complet : contexte, plan, génération, publication, vérification, correction.</p><div class="table-wrap"><table><thead><tr><th>Exercice</th><th>Consigne</th><th>Preuve</th></tr></thead><tbody><tr><td>Dossier</td><td>Rassemble audit, structure et captures.</td><td>Le dossier contient les bons fichiers.</td></tr>
+<tr><td>Prompt</td><td>Écris la mission sans flou.</td><td>Codex reformule le périmètre.</td></tr>
+<tr><td>Article test</td><td>Génère un seul article.</td><td>Il s&#x27;affiche correctement.</td></tr>
+<tr><td>Lot</td><td>Génère 10 à 20 articles.</td><td>Ils sont programmés.</td></tr>
+<tr><td>Correction</td><td>Détecte un problème de ton.</td><td>Le lot est modifié sans casser les dates.</td></tr></tbody></table></div>
+    
+      
+    </section>
+    
+    <section id="section-80" class="section dark-section reveal" data-section="80">
+      
+      <div class="section-meta">
+        <span>80</span>
+        <em>récap</em>
+      </div>
+      <h2>Le récap final</h2>
+      <p class="lead">Je pars d&#x27;un blog existant, je donne le contexte à Codex, je teste un article, j&#x27;enrichis le plan éditorial, je génère les articles, je programme WordPress, je contrôle le rendu, puis je corrige le lot. C&#x27;est cette boucle qui transforme une simple génération de texte en compétence d&#x27;expert IA.</p><div class="card-grid cols-3"><article><b>A faire</b><p>Toujours commencer par le contexte et un article test.</p></article>
+<article><b>A éviter</b><p>Publier un gros lot sans vérification éditoriale.</p></article>
+<article><b>A vendre</b><p>Un système blog SEO/GEO automatisable et maintenable.</p></article></div>
+    
+    </section>
+        
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>DENEM Academy · Séance 11</span>
+      <span>HTML, transcription, prompts et captures vidéo</span>
+    </div>
+  </footer>
+  <script>
+    const progress = document.getElementById('progress');
+    const navLinks = [...document.querySelectorAll('.nav a')];
+    const sections = [...document.querySelectorAll('[data-section]')];
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progress.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        navLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach((el) => navObserver.observe(el));
+    document.querySelectorAll('.copy-btn').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const code = button.closest('.prompt-card').querySelector('code').innerText;
+        await navigator.clipboard.writeText(code);
+        button.textContent = 'Copie';
+        button.classList.add('copied');
+        setTimeout(() => {
+          button.textContent = 'Copier';
+          button.classList.remove('copied');
+        }, 1400);
+      });
+    });
+  </script>
+</body>
+</html>
