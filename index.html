@@ -444,19 +444,51 @@ th { background: var(--ink); color: #fff; }
   color: #334155;
   font-weight: 800;
 }
-.footer {
+.sources-section {
+  max-width: none;
   border-top: 2px solid var(--ink);
-  padding: 28px 18px;
   background: #fff;
+  padding: 56px 18px;
 }
-.footer-inner {
+.sources-inner {
   max-width: 1320px;
   margin: auto;
+}
+.sources-section h2 {
+  margin: 0 0 22px;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 950;
+}
+.sources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.sources-list a {
+  display: inline-flex;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-weight: 900;
+}
+.sources-list a:hover {
+  background: var(--green);
+}
+.sources-kicker {
+  display: inline-flex;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  background: var(--green);
+  padding: 7px 10px;
+  margin-bottom: 18px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -506,7 +538,8 @@ th { background: var(--ink); color: #fff; }
   .section { padding: 52px 16px; }
   .shot { box-shadow: var(--shadow-sm); }
   .prompt-card pre { font-size: 12px; }
-  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .sources-section h2 { font-size: 32px; }
+  .sources-list { display: grid; grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
@@ -2033,12 +2066,20 @@ Ne mentionne pas RestIA à la troisieme personne dans le contenu.</code></pre>
     </section>
         
   </main>
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>DENEM Academy · Séance 11</span>
-      <span>HTML, transcription, prompts et captures vidéo</span>
+  <section class="sources-section" id="sources" aria-labelledby="sources-title">
+    <div class="sources-inner">
+      <span class="sources-kicker">Sources</span>
+      <h2 id="sources-title">Sources</h2>
+      <ul class="sources-list">
+        <li><a href="https://developer.wordpress.org/rest-api/reference/posts/" target="_blank" rel="noreferrer">WordPress REST API - Posts</a></li>
+<li><a href="https://wordpress.org/documentation/article/post-status/" target="_blank" rel="noreferrer">WordPress - Post Status</a></li>
+<li><a href="https://developers.openai.com/api/docs/guides/image-generation" target="_blank" rel="noreferrer">OpenAI API - Image génération</a></li>
+<li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noreferrer">Google Search Central - SEO Starter Guide</a></li>
+<li><a href="https://schema.org/Article" target="_blank" rel="noreferrer">Schema.org - Article</a></li>
+<li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noreferrer">GitHub Docs - GitHub Pages</a></li>
+      </ul>
     </div>
-  </footer>
+  </section>
   <script>
     const progress = document.getElementById('progress');
     const navLinks = [...document.querySelectorAll('.nav a')];
